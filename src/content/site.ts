@@ -283,6 +283,8 @@ export type Project = {
     repo?: string;
     demo?: string;
     paper?: string;
+    appstore?: string;
+    playstore?: string;
   };
 };
 
@@ -409,8 +411,8 @@ export const projects: Project[] = [
     },
     tags: ["Astronomie", "Flutter", "Dart", "Position solaire", "Mobile & web"],
     links: {
-      demo: "", // ➕ ajoute le lien de l'app (web / Play Store / App Store) si tu veux
-      repo: "", // ➕ ajoute le lien GitHub si tu veux
+      appstore: "https://apps.apple.com/fr/app/tawqit/id6758964906",
+      playstore: "https://play.google.com/store/apps/details?id=com.tawqit.tawqit&hl=fr",
     },
   },
 ];

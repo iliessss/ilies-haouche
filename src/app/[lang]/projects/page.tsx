@@ -75,6 +75,12 @@ export default async function ProjectsPage({
                   {project.links.demo && (
                     <LinkItem href={project.links.demo} label="Démo" />
                   )}
+                  {project.links.appstore && (
+                    <LinkItem href={project.links.appstore} label="App Store" />
+                  )}
+                  {project.links.playstore && (
+                    <LinkItem href={project.links.playstore} label="Google Play" />
+                  )}
                 </div>
               )}
             </article>

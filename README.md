@@ -9,7 +9,7 @@ Construit avec **Next.js 16**, **React 19** et **Tailwind CSS v4**. Mode clair/s
 ## 🚀 Démarrer en local
 
 ```bash
-cd ~/Projects/ilies-website
+cd ~/Projects/ilies-haouche
 npm install      # une seule fois
 npm run dev      # lance le site sur http://localhost:3000
 ```
@@ -71,14 +71,14 @@ Tout est dans `src/i18n/dictionary.ts` (les deux langues côte à côte).
 
 ### Option recommandée : Vercel + GitHub (déploiement automatique)
 
-1. Crée un dépôt sur GitHub (ex : `ilies-website`).
+1. Crée un dépôt sur GitHub (ex : `ilies-haouche`).
 2. Pousse le projet :
    ```bash
-   cd ~/Projects/ilies-website
+   cd ~/Projects/ilies-haouche
    git add -A
    git commit -m "Site personnel"
    git branch -M main
-   git remote add origin https://github.com/<ton-compte>/ilies-website.git
+   git remote add origin https://github.com/<ton-compte>/ilies-haouche.git
    git push -u origin main
    ```
 3. Sur https://vercel.com → **Add New… → Project** → importe le dépôt GitHub.
