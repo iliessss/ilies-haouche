@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { locales, type Locale } from "@/i18n/config";
 
@@ -23,7 +22,9 @@ export default function LanguageSwitcher({ current }: { current: Locale }) {
       {locales.map((locale) => {
         const active = locale === current;
         return (
-          <Link
+          // <a> (et non <Link>) : rechargement complet pour que le script de
+          // thème se ré-applique et garde le mode sombre au changement de langue.
+          <a
             key={locale}
             href={pathFor(locale)}
             aria-current={active ? "true" : undefined}
@@ -34,7 +35,7 @@ export default function LanguageSwitcher({ current }: { current: Locale }) {
             }
           >
             {locale.toUpperCase()}
-          </Link>
+          </a>
         );
       })}
     </div>
