@@ -273,7 +273,13 @@ export const conferences: Conference[] = [
 
 /* ─────────────────────────── PROJETS ─────────────────────────── */
 
+export type ProjectDownload = {
+  label: Localized;
+  file: string; // chemin d'un fichier déposé dans /public (ex: "/cours/elements-finis.pdf")
+};
+
 export type Project = {
+  slug: string; // identifiant pour l'URL : /projects/<slug>
   title: Localized;
   period: string;
   summary: Localized;
@@ -286,10 +292,34 @@ export type Project = {
     appstore?: string;
     playstore?: string;
   };
+  // PDF téléchargeables (déposés dans /public)
+  downloads?: ProjectDownload[];
 };
 
 export const projects: Project[] = [
   {
+    slug: "cours-methodes-numeriques",
+    title: {
+      fr: "Cours — Méthodes numériques",
+      en: "Course — Numerical methods",
+    },
+    period: "Cours",
+    summary: {
+      fr: "Notes de cours sur les méthodes numériques : différences finies, éléments finis, volumes finis…",
+      en: "Lecture notes on numerical methods: finite differences, finite elements, finite volumes…",
+    },
+    description: {
+      fr: "Un cours progressif sur les méthodes numériques pour les EDP, avec la théorie, des exemples et du code. Clique pour lire le cours complet (équations, schémas, exercices) et télécharger les PDF.",
+      en: "A progressive course on numerical methods for PDEs, with theory, examples and code. Click to read the full course (equations, schemes, exercises) and download the PDFs.",
+    },
+    tags: ["Différences finies", "Éléments finis", "Volumes finis", "Cours"],
+    // Exemple de PDF : dépose le fichier dans public/cours/ et décommente
+    // downloads: [
+    //   { label: { fr: "Cours complet (PDF)", en: "Full course (PDF)" }, file: "/cours/methodes-numeriques.pdf" },
+    // ],
+  },
+  {
+    slug: "vof-phase-field-surfactants",
     title: {
       fr: "Méthode hybride VoF / champ de phase pour surfactants solubles",
       en: "Hybrid VoF / Phase-Field method for soluble surfactants",
@@ -307,6 +337,7 @@ export const projects: Project[] = [
     links: {},
   },
   {
+    slug: "stabilite-lineaire-deux-interfaces",
     title: {
       fr: "Analyse de stabilité linéaire des écoulements à deux interfaces",
       en: "Linear stability analysis of two-interface flows",
@@ -324,6 +355,7 @@ export const projects: Project[] = [
     links: {},
   },
   {
+    slug: "rayleigh-taylor-surfactants",
     title: {
       fr: "Instabilité de Rayleigh-Taylor avec surfactants",
       en: "Rayleigh-Taylor instability with surfactants",
@@ -341,6 +373,7 @@ export const projects: Project[] = [
     links: {},
   },
   {
+    slug: "lentilles-liquides-film-savon",
     title: {
       fr: "Lentilles liquides sur film de savon : analogues gravitationnels",
       en: "Liquid lenses on a soap film: gravitational analogs",
@@ -358,6 +391,7 @@ export const projects: Project[] = [
     links: {},
   },
   {
+    slug: "basilisk-sandbox",
     title: {
       fr: "Basilisk Sandbox — écoulements interfaciaux & surfactants",
       en: "Basilisk Sandbox — interfacial flows & surfactants",
@@ -377,6 +411,7 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "chaine-youtube-methodes-numeriques",
     title: {
       fr: "Chaîne YouTube — programmation pour les méthodes numériques",
       en: "YouTube channel — programming for numerical methods",
@@ -396,6 +431,7 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "tawqit",
     title: {
       fr: "Tawqit — calcul astronomique des heures de prière",
       en: "Tawqit — astronomical computation of prayer times",

@@ -56,10 +56,12 @@ const dictionary = {
       typeSeminar: "Séminaire",
     },
     projects: {
-      title: "Projets de recherche",
+      title: "Projets & cours",
       subtitle:
-        "Travaux numériques et thématiques explorés au cours de mon doctorat et de mes collaborations.",
+        "Travaux de recherche, cours de méthodes numériques et projets logiciels. Clique sur une carte pour ouvrir la page détaillée.",
       empty: "Les projets seront ajoutés prochainement.",
+      back: "Tous les projets",
+      downloads: "Téléchargements",
     },
     teaching: {
       title: "Enseignement",
@@ -131,10 +133,12 @@ const dictionary = {
       typeSeminar: "Seminar",
     },
     projects: {
-      title: "Research projects",
+      title: "Projects & courses",
       subtitle:
-        "Numerical work and research topics explored during my PhD and collaborations.",
+        "Research work, numerical-methods courses and software projects. Click a card to open its detailed page.",
       empty: "Projects will be added soon.",
+      back: "All projects",
+      downloads: "Downloads",
     },
     teaching: {
       title: "Teaching",
