@@ -126,10 +126,7 @@ visible aux basses latitudes — d'où son observation aisée dans la péninsule
 Arabique.
 
 **Le *Maghrib* (coucher).** Il correspond à la **disparition complète du disque
-solaire** — bord supérieur inclus — sous l'**horizon visible** à l'Ouest. Dans la
-tradition chiite (jaʿfarite), une précaution supplémentaire (*iḥtiyāṭ wājib*)
-consiste à attendre que la **rougeur à l'Est**, apparue après le coucher,
-disparaisse également (soit un abaissement d'environ 4°).
+solaire** — bord supérieur inclus — sous l'**horizon visible** à l'Ouest.
 
 **La nuit légale, et non astronomique.** La *nuit légale (sharʿī)* s'étend du
 **coucher du soleil jusqu'à l'apparition du *fajr ṣādiq*** (an-Nasafī, m. 710 H) —
@@ -158,6 +155,113 @@ l'astronome au *temps sharʿī* du calendrier de prière.
 
 ---
 
+# II. Mécanique céleste et données de calcul
+
+Pour transformer les signes visuels — l'aube, la tombée de la nuit — en horaires
+précis, le *muwaqqit* moderne s'appuie sur la **mécanique céleste** : coordonnées
+géographiques, variables astronomiques changeantes et **trigonométrie sphérique**.
+
+## 1. Les coordonnées indispensables
+
+Le calcul en un point du globe repose sur trois grandeurs :
+
+- **La latitude** $\varphi$ — position au nord/sud de l'équateur (la hauteur du
+  pôle céleste au-dessus de l'horizon est égale à la latitude du lieu).
+- **La longitude** $\lambda$ — nécessaire pour relier l'heure locale au temps de
+  référence (Greenwich).
+- **La déclinaison solaire** $\delta$ — l'angle des rayons du Soleil avec le plan
+  de l'équateur. Du fait de l'inclinaison de l'axe terrestre, elle varie chaque
+  jour, oscillant entre $+23^\circ 26'$ (solstice d'été) et $-23^\circ 26'$
+  (solstice d'hiver).
+
+## 2. La mesure du temps et l'équation du temps
+
+Le temps de nos montres ne suit pas exactement le Soleil. On distingue :
+
+- **Le temps solaire vrai (TSV)** — défini par la position réelle du Soleil ; le
+  *midi solaire vrai* est l'instant où le Soleil passe au méridien (point le plus
+  haut).
+- **Le temps solaire moyen (TSM)** — un temps fictif supposant un mouvement
+  parfaitement régulier.
+- **L'équation du temps** $E$ — l'écart (en minutes) entre les deux, dû à
+  l'**excentricité** de l'orbite et à l'**obliquité** de l'écliptique. C'est elle
+  qui corrige le passage du Soleil réel vers l'heure de nos montres.
+
+## 3. L'astronomie sphérique et la formule de l'angle horaire
+
+Le moteur du calcul est la **trigonométrie sphérique**, appliquée au triangle
+astronomique reliant le pôle céleste $P$, le zénith de l'observateur $Z$ et le
+Soleil. La formule maîtresse donne l'**angle horaire** $H$ auquel le Soleil
+atteint une altitude $h$ donnée :
+
+$$
+\cos H = \frac{\sin h - \sin\varphi\,\sin\delta}{\cos\varphi\,\cos\delta}
+$$
+
+où $h$ est l'altitude du Soleil (négative sous l'horizon, pour le *Fajr* et
+l'*ʿIshāʾ*). On convertit ensuite $H$ en temps à raison de $15^\circ = 1$ heure :
+
+$$
+t_{\text{prière}} = t_{\text{Ḏuhr}} \mp \frac{H}{15}
+\qquad(-\ \text{le matin},\ +\ \text{l'après-midi})
+$$
+
+Le *Ḏuhr* est le cas simple : le Soleil est au méridien ($H = 0$), d'où
+
+$$
+t_{\text{Ḏuhr}} = 12 + \mathrm{TZ} - \frac{\lambda}{15} - \frac{E}{60}
+$$
+
+(TZ = décalage du fuseau en heures, $\lambda$ comptée positive vers l'Est, $E$ en
+minutes).
+
+## 4. L'influence de la réfraction atmosphérique
+
+Le calcul ne peut rester purement géométrique : l'atmosphère **dévie** les rayons
+et fait paraître le Soleil plus haut qu'il ne l'est. Pour le lever (*Chourūq*) et
+le coucher (*Maghrib*), on prend donc une altitude de
+
+$$
+h \approx -0{,}833^\circ = -\underbrace{34'}_{\text{réfraction}} - \underbrace{16'}_{\text{demi-diamètre}}
+$$
+
+au lieu de $0^\circ$ — garantissant que le *Maghrib* n'est pas annoncé avant la
+disparition physique totale du disque.
+
+## 5. Comment Tawqit le calcule
+
+L'application applique ces principes pas à pas. D'abord la **position du Soleil**
+au jour julien $\mathrm{JD}$, par les formules de basse précision de
+l'*Astronomical Almanac* (avec $n = \mathrm{JD} - 2\,451\,545$) :
+
+$$
+\begin{aligned}
+L &= 280{,}466 + 0{,}985\,647\,4\,n \pmod{360} && \text{(longitude moyenne)}\\
+g &= 357{,}528 + 0{,}985\,600\,3\,n \pmod{360} && \text{(anomalie moyenne)}\\
+\lambda &= L + 1{,}915\sin g + 0{,}020\sin 2g, \quad \varepsilon = 23{,}44^\circ\\
+\delta &= \arcsin(\sin\varepsilon\,\sin\lambda), \quad E = 4\,(L - \alpha)
+\end{aligned}
+$$
+
+avec $\alpha = \operatorname{atan2}(\cos\varepsilon\sin\lambda,\ \cos\lambda)$.
+Chaque prière s'obtient ensuite par la formule maîtresse, en y injectant son
+altitude $h$ :
+
+- **Chourūq / Maghrib** : $h \approx -0{,}833^\circ$, mais Tawqit **raffine
+  l'horizon** en ajoutant la réfraction (selon la pression et la température), le
+  demi-diamètre solaire, la parallaxe et l'**abaissement d'horizon** lié à
+  l'altitude du lieu — c'est le *Tamkīn* mis en équations.
+- **Fajr / ʿIshāʾ** : $h = -\alpha$, où $\alpha$ est l'angle de dépression choisi.
+- **ʿAṣr** : l'altitude est fixée par la longueur d'ombre,
+  $$h_{\text{ʿAṣr}} = \operatorname{arccot}\!\big(t + \tan|\varphi - \delta|\big),\qquad t = 1\ (\text{majorité}),\ t = 2\ (\text{ḥanafite}).$$
+
+Enfin, deux minutes de précaution sont ajoutées au *Maghrib*, et aux très hautes
+latitudes — lorsque l'angle n'est jamais atteint — l'application bascule sur les
+règles de *Takdīr* (ville la plus proche, division de la nuit) que nous
+détaillerons.
+
+---
+
 ## L'application Tawqit
 
 C'est dans cet héritage que s'inscrit **Tawqit**, l'application (mobile et web)
@@ -180,7 +284,7 @@ réglable et des ajustements manuels — reprenant, en code, le geste des
 - Al-Burzulī, *Jāmiʿ masāʾil al-aḥkām* (instruments du *mīqāt*).
 - S. Acaroğlu, *The Calculation of Islamic Prayer Times*, thèse, Humboldt-Universität zu Berlin.
 - *Definition & Calculation of Prayer Timings* (réfraction et signes du fajr).
-- *Prayer Times Calculation* (conventions de calcul ; position jaʿfarite).
+- *Prayer Times Calculation* (conventions de calcul des heures de prière).
 - G. G. Bennett, « The Calculation of Astronomical Refraction in Marine Navigation », *Journal of Navigation*, **35** (1982).
 - J. Meeus, *Astronomical Algorithms*, Willmann-Bell, 1998.
 - W. M. Smart, *Textbook on Spherical Astronomy*, Cambridge University Press.

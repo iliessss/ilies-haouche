@@ -121,10 +121,7 @@ scattering sunlight along the ecliptic), best seen at low latitudes — hence it
 easy observation in the Arabian Peninsula.
 
 **The *Maghrib* (sunset).** It corresponds to the **complete disappearance of the
-solar disk** — upper limb included — below the **visible horizon** in the West. In
-the Shia (Jaʿfarī) tradition, an additional precaution (*iḥtiyāṭ wājib*) is to wait
-until the **redness in the eastern sky**, which appears after sunset, also fades
-(a depression of about 4°).
+solar disk** — upper limb included — below the **visible horizon** in the West.
 
 **The legal night, not the astronomical one.** The *legal night (sharʿī)* extends
 from **sunset to the appearance of the *fajr ṣādiq*** (al-Nasafī, d. 710 AH) — to
@@ -153,6 +150,108 @@ time* of the prayer calendar.
 
 ---
 
+# II. Celestial mechanics and computation data
+
+To turn the visual signs — dawn, nightfall — into precise times, the modern
+*muwaqqit* relies on **celestial mechanics**: geographic coordinates, changing
+astronomical variables and **spherical trigonometry**.
+
+## 1. The essential coordinates
+
+Computing times at a point on the globe rests on three quantities:
+
+- **Latitude** $\varphi$ — position north/south of the equator (the altitude of
+  the celestial pole above the horizon equals the local latitude).
+- **Longitude** $\lambda$ — needed to relate local time to the reference meridian
+  (Greenwich).
+- **Solar declination** $\delta$ — the angle of the Sun's rays with the equatorial
+  plane. Owing to the tilt of the Earth's axis, it varies daily, oscillating
+  between $+23^\circ 26'$ (summer solstice) and $-23^\circ 26'$ (winter solstice).
+
+## 2. Timekeeping and the equation of time
+
+Our clocks do not exactly follow the Sun. We distinguish:
+
+- **Apparent solar time** — defined by the real position of the Sun; *true solar
+  noon* is the instant the Sun crosses the meridian (its highest point).
+- **Mean solar time** — a fictitious time assuming perfectly uniform motion.
+- **The equation of time** $E$ — the gap (in minutes) between the two, due to the
+  **eccentricity** of the orbit and the **obliquity** of the ecliptic. It corrects
+  the passage from the real Sun to our clock time.
+
+## 3. Spherical astronomy and the hour-angle formula
+
+The engine of the computation is **spherical trigonometry**, applied to the
+astronomical triangle linking the celestial pole $P$, the observer's zenith $Z$
+and the Sun. The master formula gives the **hour angle** $H$ at which the Sun
+reaches a given altitude $h$:
+
+$$
+\cos H = \frac{\sin h - \sin\varphi\,\sin\delta}{\cos\varphi\,\cos\delta}
+$$
+
+where $h$ is the Sun's altitude (negative below the horizon, for *Fajr* and
+*ʿIshāʾ*). One then converts $H$ to time at $15^\circ = 1$ hour:
+
+$$
+t_{\text{prayer}} = t_{\text{Ẓuhr}} \mp \frac{H}{15}
+\qquad(-\ \text{morning},\ +\ \text{afternoon})
+$$
+
+*Ẓuhr* is the simple case: the Sun is on the meridian ($H = 0$), hence
+
+$$
+t_{\text{Ẓuhr}} = 12 + \mathrm{TZ} - \frac{\lambda}{15} - \frac{E}{60}
+$$
+
+(TZ = time-zone offset in hours, $\lambda$ taken positive eastward, $E$ in
+minutes).
+
+## 4. The effect of atmospheric refraction
+
+The computation cannot stay purely geometric: the atmosphere **bends** the rays
+and makes the Sun appear higher than it is. For sunrise (*Shurūq*) and sunset
+(*Maghrib*), one therefore uses an altitude of
+
+$$
+h \approx -0.833^\circ = -\underbrace{34'}_{\text{refraction}} - \underbrace{16'}_{\text{semi-diameter}}
+$$
+
+instead of $0^\circ$ — ensuring *Maghrib* is not announced before the disk has
+physically and fully disappeared.
+
+## 5. How Tawqit computes it
+
+The app applies these principles step by step. First the **Sun's position** at
+Julian Day $\mathrm{JD}$, via the low-precision formulas of the *Astronomical
+Almanac* (with $n = \mathrm{JD} - 2\,451\,545$):
+
+$$
+\begin{aligned}
+L &= 280.466 + 0.985\,647\,4\,n \pmod{360} && \text{(mean longitude)}\\
+g &= 357.528 + 0.985\,600\,3\,n \pmod{360} && \text{(mean anomaly)}\\
+\lambda &= L + 1.915\sin g + 0.020\sin 2g, \quad \varepsilon = 23.44^\circ\\
+\delta &= \arcsin(\sin\varepsilon\,\sin\lambda), \quad E = 4\,(L - \alpha)
+\end{aligned}
+$$
+
+with $\alpha = \operatorname{atan2}(\cos\varepsilon\sin\lambda,\ \cos\lambda)$.
+Each prayer then follows from the master formula, feeding in its altitude $h$:
+
+- **Shurūq / Maghrib**: $h \approx -0.833^\circ$, but Tawqit **refines the
+  horizon** by adding refraction (from pressure and temperature), the solar
+  semi-diameter, parallax and the **horizon dip** due to the site's altitude — the
+  *Tamkīn* turned into equations.
+- **Fajr / ʿIshāʾ**: $h = -\alpha$, where $\alpha$ is the chosen depression angle.
+- **ʿAṣr**: the altitude is set by the shadow length,
+  $$h_{\text{ʿAṣr}} = \operatorname{arccot}\!\big(t + \tan|\varphi - \delta|\big),\qquad t = 1\ (\text{majority}),\ t = 2\ (\text{Hanafi}).$$
+
+Finally, two precautionary minutes are added to *Maghrib*, and at very high
+latitudes — when the angle is never reached — the app switches to the *Takdīr*
+rules (nearest city, division of the night) detailed later.
+
+---
+
 ## The Tawqit app
 
 It is within this legacy that **Tawqit**, the mobile and web app I built, takes
@@ -174,7 +273,7 @@ code, the work of the *muwaqqitūn*: translating the signs of the sky into times
 - Al-Burzulī, *Jāmiʿ masāʾil al-aḥkām* (instruments of *mīqāt*).
 - S. Acaroğlu, *The Calculation of Islamic Prayer Times*, PhD thesis, Humboldt-Universität zu Berlin.
 - *Definition & Calculation of Prayer Timings* (refraction and dawn signs).
-- *Prayer Times Calculation* (calculation conventions; Jaʿfarī position).
+- *Prayer Times Calculation* (prayer-time calculation conventions).
 - G. G. Bennett, "The Calculation of Astronomical Refraction in Marine Navigation", *Journal of Navigation*, **35** (1982).
 - J. Meeus, *Astronomical Algorithms*, Willmann-Bell, 1998.
 - W. M. Smart, *Textbook on Spherical Astronomy*, Cambridge University Press.
