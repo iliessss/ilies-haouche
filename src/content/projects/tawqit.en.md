@@ -626,10 +626,10 @@ fully disappeared.
 
 ## 3. A very uneven impact across prayers
 
-The decisive factor is the **Sun's altitude**. By varying the atmospheric
-conditions (pressure, temperature) and the site's altitude — hence refraction and
-horizon dip — we can measure their effect on each time over the year, at Roubaix
-($50.7^\circ$ N):
+The decisive factor is the **Sun's altitude**. By varying the **site's elevation**
+(from $0$ to $8000$ m, pressure and temperature fixed), we can measure its effect —
+through the horizon dip $D = 0.0353\sqrt{h_{\text{alt}}}$ — on each time over the
+year, at Roubaix ($50.7^\circ$ N):
 
 <img src="/tawqit/refraction_maghrib_light.png" alt="Effect of refraction on Maghrib" class="only-light" />
 <img src="/tawqit/refraction_maghrib_dark.png" alt="Effect of refraction on Maghrib" class="only-dark" />
@@ -640,17 +640,16 @@ horizon dip — we can measure their effect on each time over the year, at Rouba
 <img src="/tawqit/refraction_asr_light.png" alt="Effect of refraction on Asr" class="only-light" />
 <img src="/tawqit/refraction_asr_dark.png" alt="Effect of refraction on Asr" class="only-dark" />
 
-*Time computed with no refraction ($R=0$), in standard conditions ($1013$ hPa,
-$15$ °C), in cold dense air ($1030$ hPa, $-15$ °C) and at altitude ($2500$ m).
-For *Maghrib* and *Shurūq* the curves spread by several minutes; for *ʿAṣr* they
-**overlap**.*
+*Time for five site elevations ($0$ to $8000$ m). The higher you stand, the lower
+the horizon drops: *Maghrib* is **delayed** and *Shurūq* **advanced** by several
+minutes in the mountains. *ʿAṣr*, set by the shadow length and not by the horizon,
+is **unaffected** — the five curves overlap.*
 
-- **Maghrib & Shurūq** — the Sun grazes the horizon, where refraction is maximal:
-  pressure, temperature and especially altitude (horizon dip) **shift the time by
-  several minutes** — *Maghrib* is delayed, sunrise advanced.
-- **ʿAṣr** — the Sun is much higher ($13$–$33^\circ$): refraction is only
-  $1$–$4'$ and **all the curves coincide** — the effect is negligible (Tawqit
-  does not even apply it there).
+- **Maghrib & Shurūq** — the Sun grazes the horizon: the site's elevation
+  **lowers the horizon** and **shifts the time by several minutes** — *Maghrib*
+  delayed, sunrise advanced, more so the higher you go.
+- **ʿAṣr** — its time is set by the **shadow** length, not by the horizon:
+  elevation changes **nothing** — all curves coincide.
 - **Fajr & ʿIshāʾ** — defined by a chosen **depression angle** ($18^\circ$, etc.),
   they already implicitly fold in the observation conditions.
 

@@ -648,10 +648,10 @@ $$ h \approx -0{,}833^\circ = -\underbrace{34'}_{\text{réfraction}} - \underbra
 
 ## 3. Un impact très inégal selon la prière
 
-Le facteur décisif est la **hauteur du Soleil**. En faisant varier les conditions
-atmosphériques (pression, température) et l'altitude du lieu — donc la réfraction
-et l'abaissement d'horizon — on mesure leur effet sur chaque horaire au fil de
-l'année, à Roubaix ($50{,}7^\circ$ N) :
+Le facteur décisif est la **hauteur du Soleil**. En faisant varier l'**altitude du
+lieu** (de $0$ à $8000$ m, pression et température fixées), on mesure son effet —
+via l'abaissement d'horizon $D = 0{,}0353\sqrt{h_{\text{alt}}}$ — sur chaque
+horaire au fil de l'année, à Roubaix ($50{,}7^\circ$ N) :
 
 <img src="/tawqit/refraction_maghrib_light.png" alt="Effet de la réfraction sur le Maghrib" class="only-light" />
 <img src="/tawqit/refraction_maghrib_dark.png" alt="Effet de la réfraction sur le Maghrib" class="only-dark" />
@@ -662,18 +662,16 @@ l'année, à Roubaix ($50{,}7^\circ$ N) :
 <img src="/tawqit/refraction_asr_light.png" alt="Effet de la réfraction sur l'Asr" class="only-light" />
 <img src="/tawqit/refraction_asr_dark.png" alt="Effet de la réfraction sur l'Asr" class="only-dark" />
 
-*Horaire calculé sans réfraction ($R=0$), en conditions standard ($1013$ hPa,
-$15$ °C), en air froid et dense ($1030$ hPa, $-15$ °C) et en altitude
-($2500$ m). Pour le *Maghrib* et le *Chourouq*, les courbes s'écartent de
-plusieurs minutes ; pour l'*ʿAṣr*, elles se **superposent**.*
+*Horaire pour cinq altitudes du lieu ($0$ à $8000$ m). Plus on est haut, plus
+l'horizon s'abaisse : le *Maghrib* est **retardé** et le *Chourouq* **avancé** de
+plusieurs minutes en montagne. L'*ʿAṣr*, fixé par la longueur de l'ombre et non
+par l'horizon, n'est **pas affecté** — les cinq courbes se superposent.*
 
-- **Maghrib & Chourouq** — le Soleil frôle l'horizon, où la réfraction est
-  maximale : pression, température et surtout altitude (abaissement d'horizon)
-  **décalent l'horaire de plusieurs minutes** — le *Maghrib* est retardé, le
-  *Chourouq* avancé.
-- **ʿAṣr** — le Soleil est bien plus haut ($13$–$33^\circ$) : la réfraction n'y
-  vaut que $1$–$4'$ et **toutes les courbes se confondent** — l'effet est
-  négligeable (Tawqit ne l'y applique d'ailleurs pas).
+- **Maghrib & Chourouq** — le Soleil frôle l'horizon : l'altitude du lieu
+  **abaisse l'horizon** et **décale l'horaire de plusieurs minutes** — le
+  *Maghrib* est retardé, le *Chourouq* avancé, d'autant plus qu'on monte haut.
+- **ʿAṣr** — son heure est fixée par la longueur de l'**ombre**, pas par
+  l'horizon : l'altitude n'y change **rien** — toutes les courbes se confondent.
 - **Fajr & ʿIshāʾ** — définis par un **angle de dépression** choisi ($18^\circ$,
   etc.), ils intègrent déjà implicitement les conditions d'observation.
 
