@@ -1,6 +1,7 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import remarkMath from "remark-math";
+import rehypeRaw from "rehype-raw";
 import rehypeKatex from "rehype-katex";
 import rehypeHighlight from "rehype-highlight";
 import "katex/dist/katex.min.css";
@@ -16,7 +17,7 @@ export default function Markdown({ children }: { children: string }) {
     <div className="prose prose-lg max-w-none">
       <ReactMarkdown
         remarkPlugins={[remarkGfm, remarkMath]}
-        rehypePlugins={[rehypeKatex, rehypeHighlight]}
+        rehypePlugins={[rehypeRaw, rehypeKatex, rehypeHighlight]}
       >
         {children}
       </ReactMarkdown>

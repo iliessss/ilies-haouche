@@ -134,3 +134,9 @@ body {
   overflow-y: hidden;
   padding: 0.25rem 0;
 }
+
+/* Images dépendantes du thème (clair / sombre) */
+.prose .only-light, .prose .only-dark { display: block; margin-inline: auto; }
+.prose .only-dark { display: none; }
+.dark .prose .only-light { display: none; }
+.dark .prose .only-dark { display: block; }

@@ -11,7 +11,8 @@ horaires reposent en réalité sur des siècles d'observation et de mathématiqu
 > ses instruments, ses débats et ses défis. Les chapitres suivants (I, II, …)
 > développent chacun de ces points en détail.
 
-![Positions du Soleil et horaires de prière sur le dôme céleste](/tawqit/dome_prieres_fr.png)
+<img src="/tawqit/dome_prieres_light.png" alt="Positions du Soleil et horaires de prière sur le dôme céleste" class="only-light" />
+<img src="/tawqit/dome_prieres_dark.png" alt="Positions du Soleil et horaires de prière sur le dôme céleste" class="only-dark" />
 
 *Les horaires se lisent sur la course du Soleil. Sous l'horizon Est, le *Fajr*
 (aube, $-18^\circ$) ; au lever, le *Chourūq* ; au passage au méridien, le *Ḏuhr* ;

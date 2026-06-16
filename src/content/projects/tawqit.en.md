@@ -10,7 +10,8 @@ centuries of observation and mathematics.
 > instruments, debates and challenges. The following chapters (I, II, …) develop
 > each of these points in detail.
 
-![Sun positions and prayer times on the celestial dome](/tawqit/dome_prieres_en.png)
+<img src="/tawqit/dome_prieres_light.png" alt="Sun positions and prayer times on the celestial dome" class="only-light" />
+<img src="/tawqit/dome_prieres_dark.png" alt="Sun positions and prayer times on the celestial dome" class="only-dark" />
 
 *The times are read off the Sun's course. Below the eastern horizon, *Fajr* (dawn,
 $-18^\circ$); at rising, sunrise; at the meridian crossing, *Dhuhr*; in the
