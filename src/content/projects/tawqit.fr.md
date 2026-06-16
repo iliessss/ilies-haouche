@@ -252,16 +252,21 @@ Le temps de nos montres ne suit pas exactement le Soleil. On distingue :
   l'**excentricité** de l'orbite et à l'**obliquité** de l'écliptique. C'est elle
   qui corrige le passage du Soleil réel vers l'heure de nos montres.
 
-![Équation du temps au fil de l'année](/tawqit/equation_du_temps_fr.png)
+<img src="/tawqit/equation_du_temps_light.png" alt="Équation du temps au fil de l'année" class="only-light" />
+<img src="/tawqit/equation_du_temps_dark.png" alt="Équation du temps au fil de l'année" class="only-dark" />
 
 *L'équation du temps $E$ : l'écart (en minutes) entre le midi solaire vrai et le
 midi moyen, qui oscille d'environ $-14$ à $+16$ min. Sa forme à deux bosses
 résulte de la combinaison de l'excentricité de l'orbite et de l'obliquité de
 l'écliptique.*
 
-Formellement, $E = 4\,(L - \alpha)$ minutes (différence entre la longitude moyenne
-$L$ et l'ascension droite $\alpha$). Une approximation classique, avec
-$B = \tfrac{360^\circ}{365}(n - 81)$, en donne directement la courbe :
+Formellement, $E = 4\,(L - \alpha)$ minutes. Ici **$L$** est la *longitude
+moyenne* du Soleil — sa position moyenne sur son trajet annuel, corrigée de
+l'aberration (où l'on voit réellement le Soleil, et non où il « devrait » être) —
+et **$\alpha$** son *ascension droite*, sa position mesurée le long de l'équateur
+céleste, en quelque sorte la « longitude » du Soleil sur la sphère céleste. Une
+approximation classique, avec $B = \tfrac{360^\circ}{365}(n - 81)$, en donne
+directement la courbe :
 
 $$ E \approx 9{,}87\,\sin 2B - 7{,}53\,\cos B - 1{,}5\,\sin B \quad(\text{min}) $$
 

@@ -241,15 +241,19 @@ Our clocks do not exactly follow the Sun. We distinguish:
   **eccentricity** of the orbit and the **obliquity** of the ecliptic. It corrects
   the passage from the real Sun to our clock time.
 
-![Equation of time over the year](/tawqit/equation_du_temps_en.png)
+<img src="/tawqit/equation_du_temps_light.png" alt="Equation of time over the year" class="only-light" />
+<img src="/tawqit/equation_du_temps_dark.png" alt="Equation of time over the year" class="only-dark" />
 
 *The equation of time $E$: the gap (in minutes) between true and mean solar noon,
 oscillating from about $-14$ to $+16$ min. Its two-humped shape results from
 combining the orbit's eccentricity and the obliquity of the ecliptic.*
 
-Formally, $E = 4\,(L - \alpha)$ minutes (the difference between the mean longitude
-$L$ and the right ascension $\alpha$). A classic approximation, with
-$B = \tfrac{360^\circ}{365}(n - 81)$, reproduces the curve directly:
+Formally, $E = 4\,(L - \alpha)$ minutes. Here **$L$** is the *mean longitude* of
+the Sun — its average position along its yearly path, corrected for aberration
+(where the Sun is actually seen, not where it "should" be) — and **$\alpha$** is
+its *right ascension*, its position measured along the celestial equator, in a
+sense the "longitude" of the Sun on the celestial sphere. A classic approximation,
+with $B = \tfrac{360^\circ}{365}(n - 81)$, reproduces the curve directly:
 
 $$ E \approx 9.87\,\sin 2B - 7.53\,\cos B - 1.5\,\sin B \quad(\text{min}) $$
 

@@ -11,7 +11,7 @@ Lancer :  python3 equation_du_temps.py
 import math
 import numpy as np
 import matplotlib.pyplot as plt
-#plt.style.use('dark_background')
+plt.style.use('dark_background')
 
 # ───────────────────────── Calcul ─────────────────────────
 def equation_du_temps(JD: float) -> float:
@@ -46,12 +46,12 @@ for spine in ax.spines.values():
     spine.set_linewidth(10)
 ax.tick_params(axis='both', length=35, width=10)
 
-ax.plot(n_days, E, 'k')
+ax.plot(n_days, E, 'w')
 ax.set_xlabel(r"Jours $J$")
-ax.set_ylabel(r"Équation du temps $E$ (min)")
+ax.set_ylabel(r"EoT")
 ax.set_xlim(0, 365)
 
 # Pour enregistrer au lieu d'afficher :
-# fig.savefig("equation_du_temps_white.pdf", dpi=36, bbox_inches="tight")
+fig.savefig("equation_du_temps_dark.pdf", dpi=36, bbox_inches="tight")
 
 plt.show()
