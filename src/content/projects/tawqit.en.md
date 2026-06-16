@@ -186,19 +186,45 @@ equinoxes, maximal at the summer solstice ($+23.44^\circ$), minimal at the winte
 solstice ($-23.44^\circ$). It governs the Sun's altitude and the length of the
 day.*
 
-**Formula and derivation.** The Sun travels along the **ecliptic**: its ecliptic
-longitude is $\lambda$ and its ecliptic latitude is zero ($\beta = 0$). Going from
-ecliptic to equatorial coordinates is a rotation by the **obliquity** $\varepsilon$
-about the equinox axis, whose third component reads $\sin\delta =
-\sin\beta\cos\varepsilon + \cos\beta\,\sin\varepsilon\,\sin\lambda$. With
-$\beta = 0$, the exact formula remains
+**What are $\varepsilon$ and $\lambda$?** The **obliquity** $\varepsilon \approx
+23.44^\circ$ is the tilt of the Earth's rotation axis — the cause of the seasons.
+The **ecliptic longitude** $\lambda$ locates the Sun on its orbit (hence the
+season): at $\lambda = 90^\circ$ it climbs very high in the northern hemisphere
+(summer). The **declination** $\delta$ tells which side of the equator the Sun
+lights — hence an earlier or later *Fajr* depending on the season.
 
-$$ \delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big) $$
+**Derivation.** The Sun lies on the **ecliptic**: its unit position vector ($r =
+1$, ecliptic latitude $\beta = 0$) is, in ecliptic coordinates,
 
-Near the equinoxes $\lambda \approx \tfrac{360^\circ}{365}\,(n - 81)$ and
-$\varepsilon \approx 23.44^\circ$, giving the usual approximation
-$\delta \approx 23.44^\circ \,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$ — the
-sine curve plotted above.
+$$
+\mathbf{r}_e = \begin{bmatrix} X_e \\ Y_e \\ Z_e \end{bmatrix}
+= \begin{bmatrix} r\cos\beta\cos\lambda \\ r\cos\beta\sin\lambda \\ r\sin\beta \end{bmatrix}
+\;\xrightarrow{\ \beta=0,\ r=1\ }\;
+\begin{bmatrix} \cos\lambda \\ \sin\lambda \\ 0 \end{bmatrix}
+$$
+
+We move to the **equatorial frame** by a rotation through the obliquity
+$\varepsilon$ about the equinox axis (the $x$ axis):
+
+$$
+\mathbf{r}_{eq} = R_x(\varepsilon)\,\mathbf{r}_e,
+\qquad
+R_x(\varepsilon) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos\varepsilon & -\sin\varepsilon \\ 0 & \sin\varepsilon & \cos\varepsilon \end{bmatrix}
+\;\Rightarrow\;
+\mathbf{r}_{eq} = \begin{bmatrix} \cos\lambda \\ \cos\varepsilon\,\sin\lambda \\ \sin\varepsilon\,\sin\lambda \end{bmatrix}
+$$
+
+By definition of the declination, the third equatorial component is $z_{eq} =
+\sin\delta$. Therefore
+
+$$
+\sin\delta = \sin\varepsilon\,\sin\lambda \;\Longrightarrow\;
+\delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big)
+$$
+
+Near the equinoxes, $\lambda \approx \tfrac{360^\circ}{365}(n-81)$, giving the
+usual approximation $\delta \approx 23.44^\circ\,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$
+— the sine curve plotted above.
 
 ## 2. Timekeeping and the equation of time
 

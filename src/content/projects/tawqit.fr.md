@@ -193,20 +193,47 @@ Le calcul en un point du globe repose sur trois grandeurs :
 d'hiver ($-23{,}44^\circ$). C'est elle qui commande la hauteur du Soleil et la
 durée du jour.*
 
-**Formule et démonstration.** Le Soleil parcourt l'**écliptique** : sa longitude
-écliptique vaut $\lambda$ et sa latitude écliptique est nulle ($\beta = 0$). On
-passe des coordonnées écliptiques aux coordonnées équatoriales par une rotation
-d'angle $\varepsilon$ (l'**obliquité**) autour de l'axe des équinoxes, dont la
-troisième composante s'écrit $\sin\delta = \sin\beta\cos\varepsilon +
-\cos\beta\,\sin\varepsilon\,\sin\lambda$. Avec $\beta = 0$, il reste la formule
-exacte
+**Que représentent $\varepsilon$ et $\lambda$ ?** L'**obliquité** $\varepsilon
+\approx 23{,}44^\circ$ est l'inclinaison de l'axe de rotation de la Terre — la
+cause des saisons. La **longitude écliptique** $\lambda$ repère le Soleil sur son
+orbite (donc la saison) : à $\lambda = 90^\circ$, il culmine très haut dans
+l'hémisphère nord (été). La **déclinaison** $\delta$ indique de quel côté de
+l'équateur le Soleil éclaire la Terre — d'où un *Fajr* plus tôt ou plus tard selon
+la saison.
 
-$$ \delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big) $$
+**Démonstration.** Le Soleil est sur l'**écliptique** : son vecteur position
+unitaire ($r = 1$, latitude écliptique $\beta = 0$) s'écrit, en coordonnées
+écliptiques,
 
-Près des équinoxes $\lambda \approx \tfrac{360^\circ}{365}\,(n - 81)$ et
-$\varepsilon \approx 23{,}44^\circ$, d'où l'approximation usuelle
-$\delta \approx 23{,}44^\circ \,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$ —
-la sinusoïde tracée ci-dessus.
+$$
+\mathbf{r}_e = \begin{bmatrix} X_e \\ Y_e \\ Z_e \end{bmatrix}
+= \begin{bmatrix} r\cos\beta\cos\lambda \\ r\cos\beta\sin\lambda \\ r\sin\beta \end{bmatrix}
+\;\xrightarrow{\ \beta=0,\ r=1\ }\;
+\begin{bmatrix} \cos\lambda \\ \sin\lambda \\ 0 \end{bmatrix}
+$$
+
+On passe au **repère équatorial** par une rotation d'angle $\varepsilon$ autour de
+l'axe des équinoxes (l'axe $x$) :
+
+$$
+\mathbf{r}_{eq} = R_x(\varepsilon)\,\mathbf{r}_e,
+\qquad
+R_x(\varepsilon) = \begin{bmatrix} 1 & 0 & 0 \\ 0 & \cos\varepsilon & -\sin\varepsilon \\ 0 & \sin\varepsilon & \cos\varepsilon \end{bmatrix}
+\;\Rightarrow\;
+\mathbf{r}_{eq} = \begin{bmatrix} \cos\lambda \\ \cos\varepsilon\,\sin\lambda \\ \sin\varepsilon\,\sin\lambda \end{bmatrix}
+$$
+
+Or, par définition de la déclinaison, la troisième composante équatoriale vaut
+$z_{eq} = \sin\delta$. On en déduit
+
+$$
+\sin\delta = \sin\varepsilon\,\sin\lambda \;\Longrightarrow\;
+\delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big)
+$$
+
+Près des équinoxes, $\lambda \approx \tfrac{360^\circ}{365}(n-81)$, d'où
+l'approximation usuelle $\delta \approx 23{,}44^\circ\,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$
+— la sinusoïde tracée ci-dessus.
 
 ## 2. La mesure du temps et l'équation du temps
 
