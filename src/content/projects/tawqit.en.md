@@ -10,6 +10,14 @@ centuries of observation and mathematics.
 > instruments, debates and challenges. The following chapters (I, II, …) develop
 > each of these points in detail.
 
+![Sun positions and prayer times on the celestial dome](/tawqit/dome_prieres_en.png)
+
+*The times are read off the Sun's course. Below the eastern horizon, *Fajr* (dawn,
+$-18^\circ$); at rising, sunrise; at the meridian crossing, *Dhuhr*; in the
+afternoon, *Asr*; at setting, *Maghrib*; then, below the western horizon, the end
+of twilight marks *ʿIshāʾ* ($-18^\circ$). The whole science of tawqīt is turning
+these positions into clock times.*
+
 ## 1. The Muwaqqitūn: astronomy in the service of worship
 
 Within Muslim civilization, the measurement of liturgical time fell to the
@@ -174,7 +182,21 @@ Computing times at a point on the globe rests on three quantities:
 *The declination $\delta$ varies almost sinusoidally over the year: zero at the
 equinoxes, maximal at the summer solstice ($+23.44^\circ$), minimal at the winter
 solstice ($-23.44^\circ$). It governs the Sun's altitude and the length of the
-day. (Plotted with the formulas of* `prayer_calculator.dart`*.)*
+day.*
+
+**Formula and derivation.** The Sun travels along the **ecliptic**: its ecliptic
+longitude is $\lambda$ and its ecliptic latitude is zero ($\beta = 0$). Going from
+ecliptic to equatorial coordinates is a rotation by the **obliquity** $\varepsilon$
+about the equinox axis, whose third component reads $\sin\delta =
+\sin\beta\cos\varepsilon + \cos\beta\,\sin\varepsilon\,\sin\lambda$. With
+$\beta = 0$, the exact formula remains
+
+$$ \delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big) $$
+
+Near the equinoxes $\lambda \approx \tfrac{360^\circ}{365}\,(n - 81)$ and
+$\varepsilon \approx 23.44^\circ$, giving the usual approximation
+$\delta \approx 23.44^\circ \,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$ — the
+sine curve plotted above.
 
 ## 2. Timekeeping and the equation of time
 
@@ -192,6 +214,14 @@ Our clocks do not exactly follow the Sun. We distinguish:
 *The equation of time $E$: the gap (in minutes) between true and mean solar noon,
 oscillating from about $-14$ to $+16$ min. Its two-humped shape results from
 combining the orbit's eccentricity and the obliquity of the ecliptic.*
+
+Formally, $E = 4\,(L - \alpha)$ minutes (the difference between the mean longitude
+$L$ and the right ascension $\alpha$). A classic approximation, with
+$B = \tfrac{360^\circ}{365}(n - 81)$, reproduces the curve directly:
+
+$$ E \approx 9.87\,\sin 2B - 7.53\,\cos B - 1.5\,\sin B \quad(\text{min}) $$
+
+the first two terms reflecting the obliquity, the last the eccentricity.
 
 ## 3. Spherical astronomy and the hour-angle formula
 
@@ -221,17 +251,18 @@ $$
 (TZ = time-zone offset in hours, $\lambda$ taken positive eastward, $E$ in
 minutes).
 
-This equation has a solution only if $\cos H \in [-1, 1]$. When $|\cos H| > 1$,
-the Sun **never** reaches the target altitude: this is the **polar day (or
-night)**, where the prayer has no computable time — the app then switches to
-*Takdīr* (estimation).
+One then isolates the hour angle by $H = \arccos(\cdot)$. But $\arccos$ is
+**defined only on $[-1, 1]$**: the formula has a solution only if its argument
+$(\sin h - \sin\varphi\sin\delta)/(\cos\varphi\cos\delta)$ stays there. Beyond it,
+the Sun **never** reaches the target altitude $h$ — the prayer then has no
+computable time that day (the high-latitude case, treated in §5).
 
-![cos H for Fajr by latitude](/tawqit/cosH_polaire_en.png)
+![Function H = arccos and its domain](/tawqit/arccos_en.png)
 
-*$\cos H$ for Fajr ($-18^\circ$) by latitude. At $48^\circ$ N the curve stays
-within $[-1,1]$: Fajr is always defined. But from ~$55^\circ$ N it dips below
-$-1$ in summer — the Sun never descends to $18^\circ$ below the horizon: that is
-the polar day, with no computable Fajr.*
+*The hour angle $H = \arccos(\cdot)$ as a function of its argument: defined only on
+$[-1, 1]$ (from $180^\circ$ to $0^\circ$). As soon as the argument leaves this
+band, there is **no** solution — the mathematical signature of polar days and
+nights.*
 
 ## 4. How Tawqit computes it
 
@@ -263,6 +294,31 @@ Finally, two precautionary minutes are added to *Maghrib*, and at very high
 latitudes — when the angle is never reached — the app switches to the *Takdīr*
 rules (nearest city, division of the night).
 
+![The six daily times over the year at Makkah](/tawqit/prieres_makkah_en.png)
+
+*The six times computed day by day at Makkah (UTC+3, no daylight saving). *Dhuhr*
+barely moves (equation of time); *Fajr*/sunrise and *Maghrib*/*ʿIshāʾ* drift from
+noon with the seasons, following the declination.*
+
+## 5. Polar days and polar nights
+
+At high latitudes the Sun may never cross certain altitudes. In summer it does not
+descend to $18^\circ$ below the horizon: astronomical dawn **never** comes — this
+is the **polar day**, and *Fajr* and *ʿIshāʾ* have no time. In winter, farther
+north, it may not rise at all: that is the **polar night**.
+
+The same place may see **both**, depending on the season. At Tromsø (Norway,
+~$69^\circ$ N), the Sun does not set from mid-May to late July (polar day), and
+does not rise from late November to mid-January (polar night). The higher the
+latitude, the longer the period with no computable *Fajr* — hence the recourse to
+*Takdīr*.
+
+![Fajr time by latitude](/tawqit/polaire_fajr_en.png)
+
+*Fajr time ($18^\circ$) over the year, at fixed longitude, for several latitudes.
+At $45^\circ$ N it stays continuous; but from ~$55^\circ$ N the curve breaks off in
+summer (no more Fajr), and this gap widens toward the north.*
+
 ---
 
 # III. The debate over the degrees (Fajr and ʿIshāʾ)
@@ -271,6 +327,19 @@ The most delicate point of *tawqīt* is determining the **exact depression angle
 of the Sun corresponding to dawn (*Fajr*) and the end of twilight (*ʿIshāʾ*). The
 texts describe colours — whiteness, redness; scholars had to translate them into
 astronomical degrees.
+
+The **depression angle** is how far the Sun sinks **below** the horizon: $0^\circ$
+at sunset, and larger as the Sun goes lower and the sky darkens. The deeper the
+angle, the further into the night. The whole debate is therefore about *which*
+angle matches the true sign — the whiteness of *Fajr*, the fading of the *ʿIshāʾ*
+twilight.
+
+![Solar depression angle: 12°, 15°, 18°](/tawqit/angle_depression_en.png)
+
+*The depression angle in the East (*Fajr*) and West (*ʿIshāʾ*). The true sign is at
+$18^\circ$ (truly dark sky); at $12^\circ$ and $15^\circ$ the Sun is too close to
+the horizon — the sky is not yet dark, and these values are astronomically and
+legally unfounded (see §3).*
 
 ## 1. The legacy of the mutaqaddimūn: unanimity on 18°
 
@@ -411,11 +480,11 @@ fully disappeared.
 - **Maghrib & Shurūq** — the Sun grazes the horizon: refraction is maximal and
   **shifts the time by several minutes**.
 
-![Maghrib delay from refraction](/tawqit/refraction_impact_en.png)
+![Shift from refraction: Maghrib, sunrise, Asr](/tawqit/refraction_impact_en.png)
 
-*The Maghrib delay (at Roubaix) from the corrected horizon — refraction,
-semi-diameter, parallax and altitude dip. The effect, of order several minutes,
-varies over the year with the declination.*
+*Time shift from the corrected horizon (refraction + semi-diameter + parallax +
+altitude), at Roubaix. *Maghrib* is **delayed** and sunrise **advanced** by several
+minutes; *Asr*, with the Sun much higher, is barely affected.*
 
 - **ʿAṣr** — the Sun is much higher ($13$–$33^\circ$): refraction is only
   $1$–$4'$, a **small** effect (Tawqit does not even apply it there), though it

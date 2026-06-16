@@ -11,6 +11,14 @@ horaires reposent en réalité sur des siècles d'observation et de mathématiqu
 > ses instruments, ses débats et ses défis. Les chapitres suivants (I, II, …)
 > développent chacun de ces points en détail.
 
+![Positions du Soleil et horaires de prière sur le dôme céleste](/tawqit/dome_prieres_fr.png)
+
+*Les horaires se lisent sur la course du Soleil. Sous l'horizon Est, le *Fajr*
+(aube, $-18^\circ$) ; au lever, le *Chourūq* ; au passage au méridien, le *Ḏuhr* ;
+l'après-midi, l'*Asr* ; au coucher, le *Maghrib* ; puis, sous l'horizon Ouest, la
+fin du crépuscule marque l'*ʿIshāʾ* ($-18^\circ$). Toute la science du tawqīt
+consiste à convertir ces positions en heures.*
+
 ## 1. Les muwaqqitūn : l'astronomie au service du culte
 
 Au sein de la civilisation musulmane, la mesure du temps liturgique revenait aux
@@ -181,7 +189,22 @@ Le calcul en un point du globe repose sur trois grandeurs :
 *La déclinaison $\delta$ varie de façon quasi sinusoïdale sur l'année : nulle aux
 équinoxes, maximale au solstice d'été ($+23{,}44^\circ$), minimale au solstice
 d'hiver ($-23{,}44^\circ$). C'est elle qui commande la hauteur du Soleil et la
-durée du jour. (Tracé avec les formules de* `prayer_calculator.dart`*.)*
+durée du jour.*
+
+**Formule et démonstration.** Le Soleil parcourt l'**écliptique** : sa longitude
+écliptique vaut $\lambda$ et sa latitude écliptique est nulle ($\beta = 0$). On
+passe des coordonnées écliptiques aux coordonnées équatoriales par une rotation
+d'angle $\varepsilon$ (l'**obliquité**) autour de l'axe des équinoxes, dont la
+troisième composante s'écrit $\sin\delta = \sin\beta\cos\varepsilon +
+\cos\beta\,\sin\varepsilon\,\sin\lambda$. Avec $\beta = 0$, il reste la formule
+exacte
+
+$$ \delta = \arcsin\!\big(\sin\varepsilon\,\sin\lambda\big) $$
+
+Près des équinoxes $\lambda \approx \tfrac{360^\circ}{365}\,(n - 81)$ et
+$\varepsilon \approx 23{,}44^\circ$, d'où l'approximation usuelle
+$\delta \approx 23{,}44^\circ \,\sin\!\big(\tfrac{360^\circ}{365}(n-81)\big)$ —
+la sinusoïde tracée ci-dessus.
 
 ## 2. La mesure du temps et l'équation du temps
 
@@ -202,6 +225,14 @@ Le temps de nos montres ne suit pas exactement le Soleil. On distingue :
 midi moyen, qui oscille d'environ $-14$ à $+16$ min. Sa forme à deux bosses
 résulte de la combinaison de l'excentricité de l'orbite et de l'obliquité de
 l'écliptique.*
+
+Formellement, $E = 4\,(L - \alpha)$ minutes (différence entre la longitude moyenne
+$L$ et l'ascension droite $\alpha$). Une approximation classique, avec
+$B = \tfrac{360^\circ}{365}(n - 81)$, en donne directement la courbe :
+
+$$ E \approx 9{,}87\,\sin 2B - 7{,}53\,\cos B - 1{,}5\,\sin B \quad(\text{min}) $$
+
+les deux premiers termes traduisant l'obliquité, le dernier l'excentricité.
 
 ## 3. L'astronomie sphérique et la formule de l'angle horaire
 
@@ -231,17 +262,18 @@ $$
 (TZ = décalage du fuseau en heures, $\lambda$ comptée positive vers l'Est, $E$ en
 minutes).
 
-Cette équation n'a de solution que si $\cos H \in [-1, 1]$. Quand $|\cos H| > 1$,
-le Soleil n'atteint **jamais** l'altitude visée : c'est le **jour (ou la nuit)
-polaire**, où la prière n'a pas d'heure calculable — l'application bascule alors
-sur le *Takdīr* (estimation).
+On isole alors l'angle horaire par $H = \arccos(\cdot)$. Or l'$\arccos$ n'est
+**défini que sur $[-1, 1]$** : la formule n'a de solution que si son argument
+$(\sin h - \sin\varphi\sin\delta)/(\cos\varphi\cos\delta)$ y reste. Au-delà, le
+Soleil n'atteint **jamais** l'altitude $h$ visée — la prière n'a alors pas d'heure
+calculable ce jour-là (cas des hautes latitudes, traité au §5).
 
-![cos H pour le Fajr selon la latitude](/tawqit/cosH_polaire_fr.png)
+![Fonction H = arccos et son domaine de définition](/tawqit/arccos_fr.png)
 
-*$\cos H$ pour le Fajr ($-18^\circ$) selon la latitude. À $48^\circ$ N, la courbe
-reste dans la bande $[-1,1]$ : le Fajr est toujours défini. Mais dès ~$55^\circ$ N,
-elle plonge sous $-1$ en été — le Soleil ne descend jamais à $18^\circ$ sous
-l'horizon : c'est le jour polaire, sans Fajr calculable.*
+*L'angle horaire $H = \arccos(\cdot)$ en fonction de son argument : défini
+uniquement sur $[-1, 1]$ (de $180^\circ$ à $0^\circ$). Dès que l'argument sort de
+cette bande, il n'existe **aucune** solution — c'est la signature mathématique des
+jours et nuits polaires.*
 
 ## 4. Comment Tawqit le calcule
 
@@ -274,6 +306,33 @@ Enfin, deux minutes de précaution sont ajoutées au *Maghrib*, et aux très hau
 latitudes — lorsque l'angle n'est jamais atteint — l'application bascule sur les
 règles de *Takdīr* (ville la plus proche, division de la nuit).
 
+![Les six horaires au fil de l'année à La Mecque](/tawqit/prieres_makkah_fr.png)
+
+*Les six horaires calculés jour par jour à La Mecque (UTC+3, sans changement
+d'heure). Le *Ḏuhr* bouge peu (équation du temps) ; *Fajr*/*Chourūq* et
+*Maghrib*/*ʿIshāʾ* s'écartent du midi au gré des saisons, au rythme de la
+déclinaison.*
+
+## 5. Jours polaires et nuits polaires
+
+Aux latitudes élevées, le Soleil peut ne jamais franchir certaines altitudes. En
+été, il ne descend pas jusqu'à $18^\circ$ sous l'horizon : l'aube astronomique
+n'arrive **jamais** — c'est le **jour polaire**, et le *Fajr* comme l'*ʿIshāʾ*
+n'ont pas d'heure. En hiver, plus au nord, il peut ne pas se lever du tout :
+c'est la **nuit polaire**.
+
+Un même lieu connaît parfois **les deux** selon la saison. À Tromsø (Norvège,
+~$69^\circ$ N), le Soleil ne se couche pas de mi-mai à fin juillet (jour polaire),
+et ne se lève pas de fin novembre à mi-janvier (nuit polaire). Plus la latitude
+monte, plus la période sans *Fajr* calculable s'allonge — d'où le recours au
+*Takdīr*.
+
+![Heure du Fajr selon la latitude](/tawqit/polaire_fajr_fr.png)
+
+*Heure du *Fajr* ($18^\circ$) au fil de l'année, à longitude fixe, pour plusieurs
+latitudes. À $45^\circ$ N elle reste continue ; mais dès ~$55^\circ$ N la courbe
+s'interrompt en été (plus de *Fajr*), et ce « trou » s'élargit vers le nord.*
+
 ---
 
 # III. Le débat sur les degrés (Fajr et ʿIshāʾ)
@@ -282,6 +341,19 @@ Le point le plus délicat du *tawqīt* est la détermination de l'**angle exact 
 dépression** du Soleil correspondant à l'aube (*Fajr*) et à la fin du crépuscule
 (*ʿIshāʾ*). Les textes décrivent des couleurs — blancheur, rougeur ; les savants
 ont dû les traduire en degrés astronomiques.
+
+L'**angle de dépression** est l'enfoncement du Soleil **sous** l'horizon : $0^\circ$
+au coucher, et d'autant plus grand que le Soleil est bas et le ciel sombre. Plus
+l'angle est profond, plus on est avancé dans la nuit. Tout le débat porte donc sur
+*quel* angle correspond au vrai signe — la blancheur du *Fajr*, la disparition du
+crépuscule de l'*ʿIshāʾ*.
+
+![Angle de dépression solaire : 12°, 15°, 18°](/tawqit/angle_depression_fr.png)
+
+*L'angle de dépression à l'Est (*Fajr*) et à l'Ouest (*ʿIshāʾ*). Le vrai signe est
+à $18^\circ$ (ciel réellement noir) ; à $12^\circ$ et $15^\circ$ le Soleil est trop
+proche de l'horizon — le ciel n'est pas encore noir, ces valeurs sont
+astronomiquement et légalement infondées (voir §3).*
 
 ## 1. L'héritage des mutaqaddimīn : l'unanimité sur les 18°
 
@@ -428,11 +500,11 @@ $$ h \approx -0{,}833^\circ = -\underbrace{34'}_{\text{réfraction}} - \underbra
 - **Maghrib & Chourūq** — le Soleil frôle l'horizon : la réfraction y est maximale
   et **décale l'horaire de plusieurs minutes**.
 
-![Retard du Maghrib dû à la réfraction](/tawqit/refraction_impact_fr.png)
+![Décalage dû à la réfraction : Maghrib, Chourouq, Asr](/tawqit/refraction_impact_fr.png)
 
-*Le retard du Maghrib (à Roubaix) dû à l'horizon corrigé — réfraction,
-demi-diamètre, parallaxe et abaissement d'altitude. L'effet, de l'ordre de
-plusieurs minutes, varie sur l'année avec la déclinaison.*
+*Décalage horaire dû à l'horizon corrigé (réfraction + demi-diamètre + parallaxe
++ altitude), à Roubaix. Le *Maghrib* est **retardé** et le *Chourūq* **avancé** de
+plusieurs minutes ; l'*Asr*, Soleil bien plus haut, n'est quasiment pas affecté.*
 
 - **ʿAṣr** — le Soleil est bien plus haut ($13$–$33^\circ$) : la réfraction n'y
   vaut que $1$–$4'$, un effet **faible** (Tawqit ne l'y applique d'ailleurs pas),
