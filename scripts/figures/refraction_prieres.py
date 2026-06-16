@@ -92,29 +92,23 @@ def make(prayer, dark):
         sp.set_linewidth(10)
     ax.tick_params(axis='both', length=35, width=10)
 
-    for alt, col in zip(ALTITUDES, COLS):
-        ax.plot(N, times(prayer, alt), color=col, label=f"{alt} m")
+    if prayer == "Asr":
+        # À l'échelle de l'heure, l'altitude est invisible (effet de quelques s) :
+        # on trace donc l'ÉCART (en secondes) par rapport au niveau de la mer, où
+        # les altitudes se distinguent nettement.
+        ref = times("Asr", 0)
+        for alt, col in zip(ALTITUDES, COLS):
+            ax.plot(N, (times("Asr", alt) - ref) * 3600.0, color=col, label=f"{alt} m")
+        ax.set_ylabel(r"écart vs $0$ m  (s)")
+    else:
+        for alt, col in zip(ALTITUDES, COLS):
+            ax.plot(N, times(prayer, alt), color=col, label=f"{alt} m")
+        ax.set_ylabel(r"Heure locale")
 
     ax.set_xlabel(r"Jours $J$")
-    ax.set_ylabel(r"Heure locale")
     ax.set_xlim(0, 365)
     ax.set_title(TITRES[prayer], fontsize=150, color=fg, pad=30)
-    loc = "upper left" if prayer == "Asr" else "best"
-    ax.legend(loc=loc, frameon=False, fontsize=70, ncol=2, title="Altitude", title_fontsize=80)
-
-    # ʿAṣr : l'effet de l'altitude n'est que de quelques secondes → encart de l'écart
-    # (t(alt) − t(0 m), en secondes) qui isole proprement l'effet sur l'année.
-    if prayer == "Asr":
-        ref = times("Asr", 0)
-        axin = ax.inset_axes([0.30, 0.10, 0.45, 0.33])
-        for alt, col in zip(ALTITUDES, COLS):
-            axin.plot(N, (times("Asr", alt) - ref) * 3600.0, color=col, lw=9)
-        axin.set_xlim(0, 365)
-        axin.set_facecolor("none")
-        for sp in axin.spines.values():
-            sp.set_edgecolor(fg); sp.set_linewidth(6)
-        axin.tick_params(colors=fg, labelsize=46, length=18, width=6)
-        axin.set_title(r"écart vs $0$ m (s)", color=fg, fontsize=58, pad=10)
+    ax.legend(loc="best", frameon=False, fontsize=70, ncol=2, title="Altitude", title_fontsize=80)
 
     suffix = "dark" if dark else "light"
     fig.savefig(f"../../public/tawqit/refraction_{prayer.lower()}_{suffix}.png",
