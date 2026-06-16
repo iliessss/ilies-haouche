@@ -381,13 +381,13 @@ $$t_{\text{Ḏuhr}} = 12 + \mathrm{TZ} - \frac{\lambda}{15} - \frac{E}{60}.$$
 **Fajr** — aube astronomique, le Soleil à $h = -18^\circ$ sous l'horizon :
 $$t_{\text{Fajr}} = t_{\text{Ḏuhr}} - \frac{H(-18^\circ)}{15}.$$
 
-**Chourūq** (lever) — le bord supérieur du Soleil **apparaît** à l'horizon, $h = h_0$ :
+**Chourūq** (lever) — la **première partie du bord supérieur** du Soleil apparaît à l'horizon visible, $h = h_0$ :
 $$t_{\text{Chourūq}} = t_{\text{Ḏuhr}} - \frac{H(h_0)}{15}.$$
 
 **ʿAṣr** — l'altitude est fixée par la longueur de l'ombre, $t = 1$ (majorité) ou $2$ (ḥanafite) :
 $$h_{\text{ʿAṣr}} = \operatorname{arccot}\!\big(t + \tan|\varphi - \delta|\big),\qquad t_{\text{ʿAṣr}} = t_{\text{Ḏuhr}} + \frac{H(h_{\text{ʿAṣr}})}{15}.$$
 
-**Maghrib** (coucher) — le bord supérieur **disparaît** sous l'horizon, $h = h_0$, plus deux minutes de précaution :
+**Maghrib** (coucher) — le **disque entier** disparaît sous l'horizon visible, $h = h_0$, plus deux minutes de précaution :
 $$t_{\text{Maghrib}} = t_{\text{Ḏuhr}} + \frac{H(h_0)}{15} + \frac{2}{60}.$$
 
 **ʿIshāʾ** — crépuscule astronomique, le Soleil de nouveau à $h = -18^\circ$ :
