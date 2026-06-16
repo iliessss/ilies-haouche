@@ -7,13 +7,95 @@ d'arriver aux heures des prières obligatoires » (al-ʿAlamī, m. 1373 H / 1953
 Si, pour le fidèle d'aujourd'hui, un simple geste sur une application suffit, ces
 horaires reposent en réalité sur des siècles d'observation et de mathématiques.
 
-## I. Les fondements du tawqīt : signes légaux et expertise
+> **Introduction.** Cette première partie survole la discipline — son histoire,
+> ses instruments, ses débats et ses défis. Les chapitres suivants (I, II, …)
+> développent chacun de ces points en détail.
+
+## 1. Les muwaqqitūn : l'astronomie au service du culte
+
+Au sein de la civilisation musulmane, la mesure du temps liturgique revenait aux
+***muwaqqitūn*** (sing. *muwaqqit*, « celui qui fixe le temps »). À la différence
+de l'astronome qui étudie les astres pour eux-mêmes, le *muwaqqit* met
+l'astronomie **au service des finalités religieuses** : c'est l'objet propre du
+*tawqīt*. La fonction se formalise surtout à l'époque mamelouke (XIIIᵉ–XIVᵉ
+siècle), souvent rattachée à une mosquée — sans empêcher certains *muwaqqit-s*,
+tel Ibn al-Shāṭir à Damas, de mener une astronomie théorique de premier plan.
+
+Aux IXᵉ–Xᵉ siècles, le monde musulman est le centre névralgique de l'astronomie.
+**Al-Battānī** (m. 317 H / 929) en est une figure majeure : il affine
+l'**excentricité de l'orbite solaire** et la position de l'**apogée**, ainsi que
+l'**obliquité de l'écliptique**, et démontre la *loi des cosinus* de la
+trigonométrie sphérique. Ces outils permettront de convertir les **signes
+visuels** décrits par la Loi en **données angulaires précises**.
+
+## 2. Les instruments d'autrefois
+
+Avant les algorithmes, les savants disposaient d'un riche outillage :
+
+- **L'astrolabe** (*al-asṭurlāb*, الأسطرلاب) — l'instrument roi : il mesure la
+  hauteur des astres et la convertit en heure locale.
+- **Le cadran solaire et le gnomon** (*al-mizwala*, *al-miqyās* ; on parle aussi
+  de *basīṭa* pour les cadrans plans médiévaux) — essentiels pour le *Ḏuhr* et
+  l'*ʿAṣr*, calculés d'après l'ombre portée.
+- **Les *azyāj*** (sing. *zīj*) — de véritables manuels astronomiques rassemblant
+  tables des positions des astres (Soleil, Lune, planètes), paramètres et
+  méthodes de calcul.
+
+> Ces instruments faisaient aussi l'objet d'un examen juridique : le juriste
+> malikite **al-Burzulī** range ainsi, parmi les outils licites, les *ramliyyāt*
+> et les *mijānāt* — termes anciens que l'on rend par cadrans et astrolabes.
+
+## 3. Des signes de la Loi aux degrés du ciel
+
+Le cœur du débat scientifique est la **traduction des signes visuels** de la
+*Sharīʿa* en **angles de dépression** du Soleil sous l'horizon. L'avis dominant
+des anciens (*mutaqaddimūn*), observé dès le IIIᵉ siècle de l'Hégire (an-Nayrīzī,
+al-Battānī, Ibn az-Zarqālluh) puis rapporté notamment par **al-Bīrūnī** (m. 440 H)
+et **al-Ṭūsī** (m. 672 H), fixe le *Fajr* à **18° sous l'horizon**. Pour
+l'*ʿIshāʾ*, les *muwaqqitūn* ont proposé **trois grandes positions** :
+
+| Avis | *Fajr* | Fin du crépuscule (*ʿIshāʾ*) |
+| ----------------------------------- | :----: | :--------------------------: |
+| Anciens (*mutaqaddimūn*), symétrique | 18°    | blanc — 18°                  |
+| al-Murrākuchī (m. 660 H)             | 20°    | rouge — 16°                  |
+| Tardifs (*mutaʾakhkhirūn*)           | 19°    | rouge — 17°                  |
+
+On notera que **le 19° désigne le *Fajr* des tardifs**, et non la blancheur de
+l'*ʿIshāʾ* : dans l'avis symétrique des anciens, la blancheur (position ḥanafite)
+correspond à **18°**.
+
+## 4. La physique en jeu : réfraction et Tamkīn
+
+L'atmosphère agit comme une lentille : la **réfraction** fait **paraître le Soleil
+au-dessus de l'horizon alors qu'il est physiquement en dessous** (≈ 34′ à
+l'horizon). C'est pourquoi le coucher standard est pris à une dépression de
+
+$$
+h_{\text{coucher}} \approx -0{,}833^\circ = -\underbrace{34'}_{\text{réfraction}} - \underbrace{16'}_{\text{demi-diamètre solaire}}
+$$
+
+Pour absorber ces écarts et les variations d'altitude, les *muwaqqitūn* ont
+institué le ***Tamkīn*** (temps de précaution) — par exemple ≈ 8 minutes pour Fès
+(al-ʿAlamī).
+
+## 5. Défis modernes : hautes latitudes et pollution lumineuse
+
+Au-delà d'environ **48° N**, le Soleil peut, en été, ne jamais descendre assez bas
+(sous 17°–19°) : les signes du *Fajr* et de l'*ʿIshāʾ* deviennent inobservables,
+et l'on recourt au ***Takdīr*** (estimation : ville la plus proche, ou division de
+la nuit). Par ailleurs, depuis les années 1970, la **pollution lumineuse** des
+villes masque les signes les plus ténus — rendant les calculs rigoureux des
+*muwaqqitūn* plus précieux que jamais.
+
+---
+
+# I. Les fondements du tawqīt : signes légaux et expertise
 
 Pour comprendre cette discipline, il faut d'abord cerner la figure centrale du
 *muwaqqit* et la nature des **signes visuels** qu'il doit interpréter, avant de
 voir pourquoi le calcul pur ne suffit pas — c'est le rôle du *Tamkīn*.
 
-### 1. Le muwaqqit face à l'astronome moderne
+## 1. Le muwaqqit face à l'astronome moderne
 
 Astronomie physique et science du *tawqīt* partagent les mêmes outils
 mathématiques, mais poursuivent des **finalités différentes** :
@@ -28,14 +110,7 @@ mathématiques, mais poursuivent des **finalités différentes** :
   quotidien, les *muwaqqitūn* ont éprouvé ces horaires de façon constante au fil
   des siècles.
 
-Cet héritage est ancien : dès les IXᵉ–Xᵉ siècles, **al-Battānī** (m. 929) affine
-l'excentricité de l'orbite *solaire*, l'obliquité de l'écliptique et démontre la
-loi des cosinus de la trigonométrie sphérique. Les savants disposaient d'un
-outillage raffiné — l'astrolabe (*al-asṭurlāb*), le cadran solaire et le gnomon
-(*al-mizwala*, *al-miqyās*), et les *azyāj* (sing. *zīj*), manuels rassemblant les
-tables des positions des astres.
-
-### 2. Les signes visuels et légaux
+## 2. Les signes visuels et légaux
 
 Tout le calcul vise à **traduire en heures de montre** des phénomènes lumineux
 précis décrits par la Loi.
@@ -65,7 +140,7 @@ fixer la fin du temps de l'*ʿIshāʾ*. *(Dans le calcul pratique et aux hautes
 latitudes, d'autres méthodes divisent plutôt la nuit astronomique ou la période
 coucher → lever — nous y reviendrons.)*
 
-### 3. Le Tamkīn (temps de précaution)
+## 3. Le Tamkīn (temps de précaution)
 
 Le calcul ne peut être purement géométrique. Le temps **astronomique** (*ḥaqīqī*,
 « réel »), fondé sur une Terre parfaite et un horizon théorique, doit être corrigé
@@ -80,6 +155,8 @@ en donne l'exemple de Fès : environ cinq minutes liées à l'altitude, plus tro
 minutes « pour écarter tout doute », soit **huit minutes** — un délai qu'il tient
 pour **obligatoire**. C'est cette correction qui fait passer du *temps ḥaqīqī* de
 l'astronome au *temps sharʿī* du calendrier de prière.
+
+---
 
 ## L'application Tawqit
 
