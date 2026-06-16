@@ -372,6 +372,9 @@ réglable et des ajustements manuels — reprenant, en code, le geste des
 
 ## Références
 
+- **« L'utilisation des degrés selon les savants du tawqīt »** — synthèse de
+  référence des avis des *muwaqqitūn* sur les degrés du *Fajr* et de l'*ʿIshāʾ*
+  (**source principale** de cet article).
 - Al-Bīrūnī, *al-Qānūn al-Masʿūdī*.
 - Naṣīr al-Dīn al-Ṭūsī, traités d'astronomie sphérique.
 - Al-Nasafī, *Kanz al-Daqāʾiq* (définitions du coucher et de la nuit légale).

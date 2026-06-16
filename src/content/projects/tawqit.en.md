@@ -358,6 +358,10 @@ code, the work of the *muwaqqitūn*: translating the signs of the sky into times
 
 ## References
 
+- **"The use of degrees according to the scholars of tawqīt"** (*L'utilisation des
+  degrés selon les savants du tawqīt*) — the reference synthesis of the
+  *muwaqqitūn*'s views on the *Fajr* and *ʿIshāʾ* degrees (**main source** of this
+  article).
 - Al-Bīrūnī, *al-Qānūn al-Masʿūdī*.
 - Naṣīr al-Dīn al-Ṭūsī, treatises on spherical astronomy.
 - Al-Nasafī, *Kanz al-Daqāʾiq* (definitions of sunset and legal night).
