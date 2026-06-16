@@ -252,6 +252,98 @@ rules (nearest city, division of the night) detailed later.
 
 ---
 
+# III. The debate over the degrees (Fajr and ʿIshāʾ)
+
+The most delicate point of *tawqīt* is determining the **exact depression angle**
+of the Sun corresponding to dawn (*Fajr*) and the end of twilight (*ʿIshāʾ*). The
+texts describe colours — whiteness, redness; scholars had to translate them into
+astronomical degrees.
+
+## 1. The legacy of the mutaqaddimūn: unanimity on 18°
+
+During the early centuries (until roughly the 7ᵗʰ century AH), a broad consensus
+formed among the great Muslim astronomers, the *mutaqaddimūn*. From **al-Nayrīzī**
+(d. 290 AH) to **al-Bīrūnī** (d. 440 AH), **Ibn al-Zarqālluh** (d. 493 AH) and
+**al-Ṭūsī** (d. 672 AH), all affirm, **by observation (*bi-r-raṣd*)**, that *Fajr*
+begins — and the *ʿIshāʾ* twilight ends — when the Sun is at **18° below the
+horizon**.
+
+The criterion is optical: at 18°, the solar glow ceases to erase (at dawn) or
+finishes revealing (at dusk) the **faintest stars** visible to the naked eye —
+exactly coinciding with modern *astronomical twilight*. To claim, as some do
+today, that al-Bīrūnī adopted 15° or 17° is in fact **false**: his value is indeed
+18°.
+
+## 2. The turn of the mutaʾakhkhirūn: asymmetry (19° / 17°)
+
+From the 8ᵗʰ century AH, later scholars (*mutaʾakhkhirūn*) questioned the perfect
+symmetry between dawn and dusk, differentiating the angles by the phenomenon
+sought:
+
+- **19° / 17°** — true dawn (whiteness) would appear earlier, at **19°**, while
+  the fading of the **redness** of twilight — the start of *ʿIshāʾ* for most
+  schools — would occur at **17°**. This view is held by the school of the
+  al-Māridīnīs, then clearly by the Ottoman Hanafi astronomer **al-Galanbawī**
+  (d. 1205 AH).
+- **20° / 16°** — Abū ʿAlī **al-Murrākuchī** (d. 660 AH) advocated an even sharper
+  asymmetry.
+- **The Hanafi view** targets the disappearance of the **whiteness** (after the
+  redness), hence a deeper angle for *ʿIshāʾ* (≈ 19° at *Fajr*, 17° at the
+  redness, the whiteness being about 2° lower) — a convention long used in Turkey.
+
+## 3. A survey of modern conventions — and their limits
+
+Contemporary organizations use varied conventions, hence discrepancies of several
+minutes between calendars:
+
+| Institution | *Fajr* | *ʿIshāʾ* |
+| --------------------------------- | :----: | :-------------------: |
+| Muslim World League (MWL)         | 18°    | 17°                   |
+| Egyptian General Authority        | 19.5°  | 17.5°                 |
+| Umm al-Qurā (Makkah)              | 18.5°  | 90 min after *Maghrib* |
+| ISNA (North America)              | 15°    | 15°                   |
+| UOIF (France)                     | 12°    | 12°                   |
+
+Values close to those of the ancients (18°, and the 17°–19.5° range) remain
+faithful to observation. **The shallower angles — 15° and especially 12° — are,
+however, contested.**
+
+**The 15° (ISNA).** It is not the fruit of rigorous observation but of an
+**untrained eye under a polluted sky**. An observation campaign in the UAE
+(2014-2017) is telling: inexperienced observers "first saw *Fajr* at 15°, then, as
+they trained, at 18° and 19°." As the source puts it: *mastery of fiqh is not
+mastery of observation*.
+
+**The 12° (UOIF, nautical twilight).** It is more fragile still: *nautical*
+twilight is a **navigation convention with no legal existence**; choosing it is
+"no more founded than choosing 10°, 11°, 13° or 14°." Generalizing it over the
+whole year **contradicts the explicit text** (*naṣṣ*), since twilight does appear
+at 18° most of the year — including in France. And it does not even solve the
+high-latitude problem: above ~53° N (Newcastle, 54°), the Sun stays above −12° all
+night.
+
+Astronomically, these shallow angles **announce *Fajr* too late and *ʿIshāʾ* too
+early**. This is why scholars urge following (*taqlīd*) a *muwaqqit* who is both
+expert and upright, whose *verified* (*taḥqīqī*) computation rests on the degrees
+established by the ancients — all the more so since the value of 18° is originally
+the work of Muslim astronomers, "from whom the Europeans took it."
+
+## 4. Light pollution and the recourse to calculation
+
+Since the 1970s, urban **light pollution** has made observing the faintest signs
+extremely difficult: an observer may believe the time has not entered when
+astronomically it has. Scholars liken this veil to that of clouds — situations
+where one **returns to the computation** of the *muwaqqitūn*, based on 18°.
+
+There remains the prudence of fasting. For *Fajr*, two opposing requirements meet:
+the ***imsāk*** (ceasing to eat), which precaution requires to **advance**, and
+the **prayer**, which precaution requires to **delay**. Unable to be cautious on
+both at once, al-ʿAlamī concludes that one should **advance the *imsāk*** — stop
+when one is sure it is still night — **and delay the prayer** — pray when one is
+sure day has come.
+
+---
+
 ## The Tawqit app
 
 It is within this legacy that **Tawqit**, the mobile and web app I built, takes

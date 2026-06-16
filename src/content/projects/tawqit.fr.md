@@ -262,6 +262,101 @@ détaillerons.
 
 ---
 
+# III. Le débat sur les degrés (Fajr et ʿIshāʾ)
+
+Le point le plus délicat du *tawqīt* est la détermination de l'**angle exact de
+dépression** du Soleil correspondant à l'aube (*Fajr*) et à la fin du crépuscule
+(*ʿIshāʾ*). Les textes décrivent des couleurs — blancheur, rougeur ; les savants
+ont dû les traduire en degrés astronomiques.
+
+## 1. L'héritage des mutaqaddimīn : l'unanimité sur les 18°
+
+Durant les premiers siècles (jusqu'au VIIᵉ siècle de l'Hégire environ), un large
+consensus s'établit chez les grands astronomes musulmans, les *mutaqaddimīn*. D'**al-Nayrīzī** (m. 290 H) à **al-Bīrūnī** (m. 440 H), **Ibn az-Zarqālluh**
+(m. 493 H) et **al-Ṭūsī** (m. 672 H), tous affirment, **par l'observation
+(*bi-r-raṣd*)**, que le *Fajr* commence — et le crépuscule de l'*ʿIshāʾ* finit —
+lorsque le Soleil est à **18° sous l'horizon**.
+
+Le critère est optique : à 18°, la lueur solaire cesse d'effacer (à l'aube) ou
+achève de révéler (au crépuscule) les **plus petites étoiles** visibles à l'œil
+nu — ce qui coïncide exactement avec le *crépuscule astronomique* moderne.
+Prétendre, comme certains aujourd'hui, qu'al-Bīrūnī aurait retenu 15° ou 17° est
+d'ailleurs **faux** : sa valeur est bien 18°.
+
+## 2. Le tournant des mutaʾakhkhirūn : l'asymétrie (19° / 17°)
+
+À partir du VIIIᵉ siècle H., des savants plus tardifs (*mutaʾakhkhirūn*) remettent
+en cause la symétrie parfaite entre l'aube et le crépuscule, en différenciant les
+angles selon le phénomène visé :
+
+- **19° / 17°** — l'aube véritable (blancheur) apparaîtrait plus tôt, à **19°**,
+  tandis que la disparition de la **rougeur** du crépuscule — début de l'*ʿIshāʾ*
+  pour la majorité des écoles — se produirait à **17°**. Cet avis est porté par
+  l'école des al-Māridīnī, puis nettement par l'astronome ḥanafite ottoman
+  **al-Galanbawī** (m. 1205 H).
+- **20° / 16°** — Abū ʿAlī **al-Murrākuchī** (m. 660 H) prônait une asymétrie
+  encore plus marquée.
+- **L'avis ḥanafite** vise la disparition de la **blancheur** (après la rougeur),
+  d'où un angle plus profond pour l'*ʿIshāʾ* (≈ 19° au *Fajr*, 17° à la rougeur,
+  la blancheur étant environ 2° plus bas) — convention longtemps en usage en
+  Turquie.
+
+## 3. Panorama des conventions modernes — et leurs limites
+
+Les organisations contemporaines emploient des conventions variées, d'où des
+écarts de plusieurs minutes entre les calendriers :
+
+| Institution | *Fajr* | *ʿIshāʾ* |
+| --------------------------------- | :----: | :-------------------: |
+| Ligue islamique mondiale (MWL)    | 18°    | 17°                   |
+| Autorité égyptienne (Survey)      | 19,5°  | 17,5°                 |
+| Umm al-Qurā (La Mecque)           | 18,5°  | 90 min après *Maghrib* |
+| ISNA (Amérique du Nord)           | 15°    | 15°                   |
+| UOIF (France)                     | 12°    | 12°                   |
+
+Les valeurs proches de celles des Anciens (18°, et la fourchette 17°–19,5°)
+restent fidèles à l'observation. **Les angles les plus faibles — 15° et surtout
+12° — sont en revanche contestés.**
+
+**Le 15° (ISNA).** Il n'est pas le fruit d'une observation rigoureuse, mais d'un
+**œil non entraîné sous un ciel pollué**. Une campagne d'observation menée aux
+Émirats (2014-2017) est éloquente : des observateurs peu aguerris « voyaient
+d'abord le *Fajr* à 15°, puis, à mesure qu'ils s'exerçaient, à 18° puis 19° ».
+Comme le résume la source : *la maîtrise du fiqh n'est pas la maîtrise de
+l'observation*.
+
+**Le 12° (UOIF, crépuscule nautique).** Il est plus fragile encore : le
+crépuscule *nautique* est une **convention de navigation, sans existence légale**;
+le retenir n'a « pas plus de fondement que de choisir 10°, 11°, 13° ou 14° ». Le
+généraliser à toute l'année **contredit le texte explicite** (*naṣṣ*), puisque le
+crépuscule apparaît bel et bien à 18° la majeure partie de l'année — y compris en
+France. Et il ne règle même pas le problème des hautes latitudes : au-delà de
+~53° N (Newcastle, 54°), le Soleil reste au-dessus de −12° toute la nuit.
+
+Astronomiquement, ces petits angles **annoncent le *Fajr* trop tard et l'*ʿIshāʾ*
+trop tôt**. C'est pourquoi les savants invitent à **suivre (*taqlīd*) un
+*muwaqqit* à la fois expert et intègre**, dont le calcul *vérifié* (*taḥqīqī*)
+repose sur les degrés établis par les Anciens — d'autant que la valeur de 18° est,
+à l'origine, l'œuvre des astronomes musulmans, « dont les Européens l'ont
+reprise ».
+
+## 4. La pollution lumineuse et le recours au calcul
+
+Depuis les années 1970, la **pollution lumineuse** des villes rend l'observation
+des signes les plus ténus extrêmement difficile : un observateur peut croire le
+temps non entré alors qu'il l'est astronomiquement. Les savants assimilent ce
+voile à celui des nuages — situations où l'on **revient au calcul** des
+*muwaqqitūn*, fondé sur le 18°.
+
+Reste la prudence du jeûne. Pour le *Fajr* se nouent deux exigences contraires :
+l'***imsāk*** (cessation de manger), qu'il faut par précaution **avancer**, et la
+**prière**, qu'il faut par précaution **retarder**. Ne pouvant être prudent sur
+les deux à la fois, al-ʿAlamī conclut qu'il faut **avancer l'*imsāk*** — s'arrêter
+quand on est sûr d'être encore dans la nuit — **et retarder la prière** — prier
+quand on est sûr que le jour est entré.
+
+---
+
 ## L'application Tawqit
 
 C'est dans cet héritage que s'inscrit **Tawqit**, l'application (mobile et web)
