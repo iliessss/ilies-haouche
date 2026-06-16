@@ -6,102 +6,77 @@ at the times of the obligatory prayers" (al-ʿAlamī, d. 1373 AH / 1953). While 
 single tap on an app is enough for today's believer, these times in fact rest on
 centuries of observation and mathematics.
 
-## 1. The Muwaqqitūn: astronomy in the service of worship
+## I. The foundations of tawqīt: legal signs and expertise
 
-Within Muslim civilization, the measurement of liturgical time fell to the
-***muwaqqitūn*** (sing. *muwaqqit*, "the one who fixes the time"). Unlike the
-astronomer who studies the heavens for their own sake, the *muwaqqit* puts
-astronomy **at the service of religious ends** — the very subject of *tawqīt*.
-The office became formalized chiefly in the Mamluk era (13ᵗʰ–14ᵗʰ century), often
-attached to a mosque — though this did not prevent some *muwaqqit*s, such as Ibn
-al-Shāṭir in Damascus, from doing first-rate theoretical astronomy.
+To understand this discipline, one must first grasp the central figure of the
+*muwaqqit* and the nature of the **visual signs** he must interpret, before seeing
+why pure calculation is not enough — the role of *Tamkīn*.
 
-In the 9ᵗʰ–10ᵗʰ centuries the Muslim world was the nerve center of astronomy.
-**Al-Battānī** (d. 317 AH / 929) was a major figure: he refined the parameters of
-the Sun's apparent orbit — the **solar eccentricity** and the position of the
-**apogee** — as well as the **obliquity of the ecliptic**, and proved the
-*law of cosines* of spherical trigonometry. These tools made it possible to
-convert the **visual signs** described by the Law into **precise angular data**.
+### 1. The muwaqqit versus the modern astronomer
 
-## 2. The instruments of old
+Physical astronomy and the science of *tawqīt* share the same mathematical tools
+but pursue **different ends**:
 
-Before algorithms, scholars relied on a rich toolkit:
+- **The astronomer** studies the heavens for physical, chemical or cosmological
+  reasons. He generally does not master the legal (*sharʿī*) meaning of the
+  phenomena tied to prayer, since these matters are not taught in astronomy
+  curricula.
+- **The *muwaqqit*** studies astronomy **solely to apply it to religious ends**.
+  He has a twofold expertise: celestial mechanics *and* the legal definitions of
+  the sacred texts. As prayer is a daily act, the *muwaqqitūn* tested these times
+  constantly over the centuries.
 
-- **The astrolabe** (*al-asṭurlāb*, الأسطرلاب) — the foremost instrument: it
-  measures the altitude of celestial bodies and converts it into local time.
-- **The sundial and gnomon** (*al-mizwala*, *al-miqyās*; medieval planar dials
-  were also called *basīṭa*) — essential for *Ẓuhr* and *ʿAṣr*, computed from the
-  cast shadow.
-- **The *azyāj*** (sing. *zīj*) — true astronomical handbooks gathering tables of
-  the positions of the heavenly bodies (Sun, Moon, planets), parameters and
-  computation methods.
+This legacy is ancient: as early as the 9ᵗʰ–10ᵗʰ centuries, **al-Battānī** (d.
+929) refined the eccentricity of the *solar* orbit, the obliquity of the ecliptic
+and proved the law of cosines of spherical trigonometry. Scholars had a refined
+toolkit — the astrolabe (*al-asṭurlāb*), the sundial and gnomon (*al-mizwala*,
+*al-miqyās*), and the *azyāj* (sing. *zīj*), handbooks gathering tables of the
+positions of the heavenly bodies.
 
-> These instruments were also subject to legal scrutiny: the Maliki jurist
-> **al-Burzulī** lists among the licit tools the *ramliyyāt* and the *mijānāt* —
-> old terms rendered as sundials and astrolabes.
+### 2. The visual and legal signs
 
-## 3. From the signs of the Law to the degrees of the sky
+The whole computation aims to **translate into clock times** the precise light
+phenomena described by the Law.
 
-The heart of the scientific debate is the **translation of the visual signs** of
-the *Sharīʿa* into **angles of depression** of the Sun below the horizon.
+**The *Fajr ṣādiq* (true dawn).** It marks the start of the morning prayer
+(*Ṣubḥ*) and of the fast. It is a **horizontal whiteness** spreading along the
+eastern horizon — a definition agreed by consensus (*ijmāʿ*) — that *grows* with
+time. It must not be confused with the ***Fajr kādhib*** (false dawn): a
+**vertical**, conical glow that appears before true dawn and then fades.
+Astronomers identify it with the **zodiacal light** (interplanetary dust
+scattering sunlight along the ecliptic), best seen at low latitudes — hence its
+easy observation in the Arabian Peninsula.
 
-**Fajr (dawn).** It begins at the *Fajr ṣādiq* (true dawn), a **horizontal
-whiteness** spreading in the East — a definition agreed upon by consensus
-(*ijmāʿ*) — as opposed to the *Fajr kādhib* (false dawn), a vertical glow.
-Through constant observation since the 3ʳᵈ century AH (al-Nayrīzī, d. 290 AH;
-al-Battānī, d. 317 AH; Ibn al-Zarqālluh, d. 493 AH), and later reported notably
-by **al-Bīrūnī** (d. 440 AH, in his *Qānūn al-Masʿūdī*) and **Naṣīr al-Dīn
-al-Ṭūsī** (d. 672 AH), the dominant view of the ancients (*mutaqaddimūn*) sets
-this moment at **18° below the horizon**.
+**The *Maghrib* (sunset).** It corresponds to the **complete disappearance of the
+solar disk** — upper limb included — below the **visible horizon** in the West. In
+the Shia (Jaʿfarī) tradition, an additional precaution (*iḥtiyāṭ wājib*) is to wait
+until the **redness in the eastern sky**, which appears after sunset, also fades
+(a depression of about 4°).
 
-**ʿIshāʾ (night).** It begins at the disappearance of the twilight (*shafaq*).
-Legally, the schools differ: for Mālik, al-Shāfiʿī and Aḥmad it is the fading of
-the **redness**; for Abū Ḥanīfa, that of the **whiteness** which follows. On the
-astronomical side, the *muwaqqitūn* proposed **three main positions**:
+**The legal night, not the astronomical one.** The *legal night (sharʿī)* extends
+from **sunset to the appearance of the *fajr ṣādiq*** (al-Nasafī, d. 710 AH) — to
+be distinguished from the *astronomical night*, between dusk at 18° and
+astronomical dawn at 18°. In classical jurisprudence, it is this legal night that
+serves to **divide the night into portions** (third, half) to set the end of the
+*ʿIshāʾ* time. *(In practical computation and at high latitudes, other methods
+instead divide the astronomical night or the sunset → sunrise span — more on this
+later.)*
 
-| Opinion | *Fajr* | End of twilight (*ʿIshāʾ*) |
-| ----------------------------------- | :----: | :------------------------: |
-| Ancients (*mutaqaddimūn*), symmetric | 18°   | white — 18°                |
-| al-Murrākuchī (d. 660 AH)            | 20°    | red — 16°                  |
-| Later scholars (*mutaʾakhkhirūn*)    | 19°    | red — 17°                  |
+### 3. Tamkīn (precautionary time)
 
-Note that **19° denotes the *Fajr* of the later scholars**, not the whiteness of
-*ʿIshāʾ*: in the ancients' symmetric view, the **whiteness** (the Hanafi
-position) corresponds to **18°**.
+The computation cannot be purely geometric. The **astronomical** time (*ḥaqīqī*,
+"real"), based on a perfect Earth and a theoretical horizon, must be corrected
+into **legal** time (*sharʿī*), the one matching what is **actually perceptible**
+to the eye. Three main factors widen the gap: **atmospheric refraction** (which
+makes the Sun appear higher than it is), the **altitude** of the observation site,
+and the **radius of the solar disk**.
 
-## 4. The physics at play: refraction and Tamkīn
-
-The computation cannot be purely geometric, because the atmosphere acts as a
-lens. **Atmospheric refraction** bends the rays and makes the **Sun appear above
-the horizon while it is physically below it**; its conventional value at the
-horizon is about **34′** (≈ 0.57°).
-
-This is why "astronomical" sunset is not taken at zero altitude. The standard
-convention places the upper limb of the disk at a depression of
-
-$$
-h_{\text{sunset}} \approx -0.833^\circ = -\underbrace{34'}_{\text{refraction}} - \underbrace{16'}_{\text{solar semi-diameter}}
-$$
-
-To absorb these optical uncertainties and the varying altitudes of locations, the
-*muwaqqitūn* introduced ***Tamkīn*** (precautionary time): a safety margin added
-to the computation. Al-ʿAlamī gives an example for Fez — about five minutes tied
-to altitude, plus three minutes "to remove any doubt", i.e. **eight minutes**
-total — so as to guarantee that the prayer time has truly begun.
-
-## 5. Modern challenges: high latitudes and light pollution
-
-Two contemporary difficulties arise:
-
-- **High latitudes.** Beyond roughly **48° N**, in summer the Sun may never
-  descend low enough (below 17°–19°): the signs of *Fajr* and *ʿIshāʾ* become
-  **unobservable**, and twilight can persist all night. Scholars then resort to
-  ***Takdīr*** (estimation): the method of the nearest city with "normal" nights
-  (*aqrab al-bilād*), or the **proportional division of the night**.
-- **Light pollution.** Since the 1970s, artificial city lighting has masked the
-  faintest signs, such as true dawn. Since individual observation is deceived by
-  the urban glow, the rigorous computations of the *muwaqqitūn* become more
-  valuable than ever.
+To absorb these gaps and remove any doubt (*shakk*) about the true entry of the
+time, the *muwaqqitūn* add a safety margin, the ***Tamkīn***. Al-ʿAlamī gives the
+example of Fez: about five minutes tied to altitude, plus three minutes "to remove
+any doubt", i.e. **eight minutes** — a delay he holds to be **obligatory**. It is
+this correction that takes us from the astronomer's *ḥaqīqī time* to the *sharʿī
+time* of the prayer calendar.
 
 ## The Tawqit app
 
@@ -119,10 +94,12 @@ code, the work of the *muwaqqitūn*: translating the signs of the sky into times
 
 - Al-Bīrūnī, *al-Qānūn al-Masʿūdī*.
 - Naṣīr al-Dīn al-Ṭūsī, treatises on spherical astronomy.
+- Al-Nasafī, *Kanz al-Daqāʾiq* (definitions of sunset and legal night).
 - Al-ʿAlamī, *Ḥāshiya ʿalā sharḥ al-Fashtālī* (on *Tamkīn*).
-- Al-Burzulī, *Jāmiʿ masāʾil al-aḥkām* (licit instruments of *mīqāt*).
+- Al-Burzulī, *Jāmiʿ masāʾil al-aḥkām* (instruments of *mīqāt*).
 - S. Acaroğlu, *The Calculation of Islamic Prayer Times*, PhD thesis, Humboldt-Universität zu Berlin.
-- *Impact of Atmospheric Refraction on Asr Time* (study of sunset refraction).
+- *Definition & Calculation of Prayer Timings* (refraction and dawn signs).
+- *Prayer Times Calculation* (calculation conventions; Jaʿfarī position).
 - G. G. Bennett, "The Calculation of Astronomical Refraction in Marine Navigation", *Journal of Navigation*, **35** (1982).
 - J. Meeus, *Astronomical Algorithms*, Willmann-Bell, 1998.
 - W. M. Smart, *Textbook on Spherical Astronomy*, Cambridge University Press.
