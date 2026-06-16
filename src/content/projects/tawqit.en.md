@@ -21,11 +21,12 @@ attached to a mosque — though this did not prevent some *muwaqqit*s, such as I
 al-Shāṭir in Damascus, from doing first-rate theoretical astronomy.
 
 In the 9ᵗʰ–10ᵗʰ centuries the Muslim world was the nerve center of astronomy.
-**Al-Battānī** (d. 317 AH / 929) was a major figure: he refined the **eccentricity
-of the solar orbit** and the position of the **apogee**, as well as the
-**obliquity of the ecliptic**, and proved the *law of cosines* of spherical
-trigonometry. These tools made it possible to convert the **visual signs**
-described by the Law into **precise angular data**.
+**Al-Battānī** (d. 317 AH / 929), whose *zīj* (astronomical tables) is
+authoritative, is among the scholars who laid the markers of this science. It was
+in fact the Muslim astronomers — not the European observatories alone — who fixed
+the angular values (such as the famous 18° we will meet again), and it is from
+them that the Europeans took them. Their tools made it possible to convert the
+**visual signs** described by the Law into **precise angular data**.
 
 ## 2. The instruments of old
 

@@ -22,11 +22,13 @@ siècle), souvent rattachée à une mosquée — sans empêcher certains *muwaqq
 tel Ibn al-Shāṭir à Damas, de mener une astronomie théorique de premier plan.
 
 Aux IXᵉ–Xᵉ siècles, le monde musulman est le centre névralgique de l'astronomie.
-**Al-Battānī** (m. 317 H / 929) en est une figure majeure : il affine
-l'**excentricité de l'orbite solaire** et la position de l'**apogée**, ainsi que
-l'**obliquité de l'écliptique**, et démontre la *loi des cosinus* de la
-trigonométrie sphérique. Ces outils permettront de convertir les **signes
-visuels** décrits par la Loi en **données angulaires précises**.
+**Al-Battānī** (m. 317 H / 929), dont le *zīj* (tables astronomiques) fait
+autorité, compte parmi les savants qui ont posé les repères de cette science. Ce
+sont d'ailleurs les astronomes musulmans — et non les seuls observatoires
+européens — qui ont fixé les valeurs angulaires (tel le fameux 18° que nous
+retrouverons), et c'est d'eux que les Européens les ont reprises. Leurs outils
+permettront de convertir les **signes visuels** décrits par la Loi en **données
+angulaires précises**.
 
 ## 2. Les instruments d'autrefois
 
