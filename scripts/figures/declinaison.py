@@ -10,6 +10,7 @@ Lancer :  python3 declinaison.py
 import math
 import numpy as np
 import matplotlib.pyplot as plt
+#plt.style.use('dark_background')
 
 # ───────────────────────── Calcul ─────────────────────────
 def declinaison(JD: float) -> float:
@@ -42,11 +43,12 @@ for spine in ax.spines.values():
     spine.set_linewidth(10)
 ax.tick_params(axis='both', length=35, width=10)
 
-ax.plot(n_days, delta)
-ax.set_xlabel(r"jour de l'année  $n$")
-ax.set_ylabel(r"déclinaison  $\delta\ (^\circ)$")
+ax.plot(n_days, delta, 'k')
+ax.set_xlabel(r"Jours $J$")
+ax.set_ylabel(r"Déclinaison $\delta$")
+ax.set_xlim(0, 365)
 
 # Pour enregistrer au lieu d'afficher :
-# fig.savefig("declinaison.png", dpi=36, bbox_inches="tight")
+fig.savefig("declinaison_white.pdf", dpi=36, bbox_inches="tight")
 
 plt.show()

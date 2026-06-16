@@ -185,7 +185,8 @@ Le calcul en un point du globe repose sur trois grandeurs :
   jour, oscillant entre $+23^\circ 26'$ (solstice d'été) et $-23^\circ 26'$
   (solstice d'hiver).
 
-![Déclinaison solaire au fil de l'année](/tawqit/declinaison_fr.png)
+<img src="/tawqit/declinaison_light.png" alt="Déclinaison solaire au fil de l'année" class="only-light" />
+<img src="/tawqit/declinaison_dark.png" alt="Déclinaison solaire au fil de l'année" class="only-dark" />
 
 *La déclinaison $\delta$ varie de façon quasi sinusoïdale sur l'année : nulle aux
 équinoxes, maximale au solstice d'été ($+23{,}44^\circ$), minimale au solstice

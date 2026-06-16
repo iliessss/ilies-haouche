@@ -178,7 +178,8 @@ Computing times at a point on the globe rests on three quantities:
   plane. Owing to the tilt of the Earth's axis, it varies daily, oscillating
   between $+23^\circ 26'$ (summer solstice) and $-23^\circ 26'$ (winter solstice).
 
-![Solar declination over the year](/tawqit/declinaison_en.png)
+<img src="/tawqit/declinaison_light.png" alt="Solar declination over the year" class="only-light" />
+<img src="/tawqit/declinaison_dark.png" alt="Solar declination over the year" class="only-dark" />
 
 *The declination $\delta$ varies almost sinusoidally over the year: zero at the
 equinoxes, maximal at the summer solstice ($+23.44^\circ$), minimal at the winter
