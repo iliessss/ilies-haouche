@@ -96,7 +96,7 @@ def make(prayer, dark):
     ax.set_title(TITRES[prayer], fontsize=150, color=fg, pad=30)
     ax.legend(loc="best", frameon=False, fontsize=70, ncol=2)
     suffix = "dark" if dark else "light"
-    fig.savefig(f"../../public/tawqit/refraction_{prayer.lower()}_{suffix}.png",
+    fig.savefig(f"refraction_{prayer.lower()}_{suffix}.png",
                 dpi=36, bbox_inches="tight", transparent=True)
     plt.close(fig)
 

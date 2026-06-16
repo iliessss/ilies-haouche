@@ -9,7 +9,7 @@ Lancer :  python3 refraction_altitude.py
 """
 import numpy as np
 import matplotlib.pyplot as plt
-plt.style.use('dark_background')
+#plt.style.use('dark_background')
 
 # ───────────────────────── Données ─────────────────────────
 h = np.linspace(0, 32, 400)                       # hauteur du Soleil (degrés)
@@ -45,6 +45,6 @@ ax.set_xlim(0, 32)
 ax.set_ylim(0, 36)
 
 # Pour enregistrer au lieu d'afficher :
-fig.savefig("refraction_altitude_dark.pdf", dpi=36, bbox_inches="tight", transparent=True)
+fig.savefig("refraction_altitude_white.pdf", dpi=36, bbox_inches="tight", transparent=True)
 
 plt.show()

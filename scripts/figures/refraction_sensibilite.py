@@ -41,7 +41,7 @@ def make(dark):
     ax.set_xlim(-20, 45)
     ax.legend(loc="upper right", frameon=False, fontsize=90, title=r"$P$", title_fontsize=100)
     suffix = "dark" if dark else "light"
-    fig.savefig(f"../../public/tawqit/refraction_sensibilite_{suffix}.png",
+    fig.savefig(f"refraction_sensibilite_{suffix}.png",
                 dpi=36, bbox_inches="tight", transparent=True)
     plt.close(fig)
 
