@@ -104,7 +104,7 @@ def make(prayer, dark):
         # (moins de pression → moins de réfraction).
         for alt, col in zip(ALTITUDES, COLS):
             ax.plot(N, asr_delay_seconds(alt), color=col, label=f"{alt} m")
-        ax.set_ylabel(r"retard dû à la réfraction  (s)")
+        ax.set_ylabel(r"Retard  (s)")
     else:
         for alt, col in zip(ALTITUDES, COLS):
             ax.plot(N, times(prayer, alt), color=col, label=f"{alt} m")
